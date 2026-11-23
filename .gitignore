@@ -1,0 +1,28 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Third-party solver binaries (install SU2 separately; not ours to redistribute)
+tools/
+
+# Private working files: never publish
+GRANT_APPLICATIONS.md
+.claude/
+
+# Run logs (they contain local file paths)
+log_*.txt
+*.log
+
+# Bulky generated data (regenerate with the scripts; keep the summary JSON/PNG/JPG)
+renders/_*.png
+cfd/**/vol_solution.vtu
+cfd/*.su2
+cfd/**/surface.vtu
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Superseded runs
+cfd/before_fix/

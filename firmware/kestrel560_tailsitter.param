@@ -1,0 +1,104 @@
+# Kestrel-560 starting parameters: ArduPlane 4.5+, SpeedyBee F405 Wing Mini (SpeedyBeeF405WING)
+# Twin-motor (non-"copter motor") tailsitter with elevons. Load in Mission Planner:
+#   Config > Full Parameter List > Load from file, then Write Params and reboot.
+#
+# THIS IS A STARTING POINT, NOT A TUNE. Props OFF for every step until the motor test and the
+# control-surface direction checks in readiness/flight_controller_settings.md pass.
+# Lines marked VERIFY name parameters whose exact value or bit depends on the firmware build:
+# check each one against the Full Parameter List description before flying.
+
+# ---- VTOL frame: dual-motor tailsitter -------------------------------------------------------
+Q_ENABLE,1
+Q_TAILSIT_ENABLE,1
+Q_FRAME_CLASS,10
+# 0 = single/dual-motor tailsitter (MOTMX is only for copter-motor tailsitters)
+Q_TAILSIT_MOTMX,0
+# 0 = multicopter-style sticks in hover (yaw stick yaws, roll stick rolls, earth frame)
+Q_TAILSIT_INPUT,0
+# forward transition ends when the nose has pitched 45 deg down from vertical
+Q_TAILSIT_ANGLE,45
+# disk loading = 0.552 kg / (2 x pi x 0.0889^2 m2) = 11.1 kg/m2, used for gain scaling
+Q_TAILSIT_DSKLD,11
+# VTOL assist below 14 m/s (trimmed stall is ~12.8 m/s, AIRSPEED_MIN is 16)
+Q_ASSIST_SPEED,14
+
+# ---- outputs ---------------------------------------------------------------------------------
+# Dual-motor tailsitters drive ThrottleLeft/ThrottleRight (73/74), NOT Motor1/Motor2 (33/34).
+SERVO1_FUNCTION,73
+SERVO2_FUNCTION,74
+SERVO3_FUNCTION,77
+SERVO4_FUNCTION,78
+
+# ---- DShot + bidirectional RPM telemetry on the two throttle outputs --------------------------
+# Throttle outputs take DShot through SERVO_BLH_MASK/OTYPE (Q_M_PWM_TYPE only covers copter motors).
+SERVO_BLH_MASK,3
+# 5 = DShot300 (more margin than 600 for bidirectional DShot on an F4)
+SERVO_BLH_OTYPE,5
+# VERIFY: bidirectional DShot needs a bdshot-capable firmware for this board and Bluejay/AM32 ESCs.
+# If no RPM shows in the status tab, set SERVO_BLH_BDMASK,0 and INS_HNTCH_MODE,1 (throttle-based).
+SERVO_BLH_BDMASK,3
+# EMAX ECO II 2306 is 12N14P
+SERVO_BLH_POLES,14
+
+# ---- gyro harmonic notch (reboot after enabling, then reload this file) ----------------------
+INS_HNTCH_ENABLE,1
+# 3 = ESC RPM telemetry
+INS_HNTCH_MODE,3
+INS_HNTCH_REF,1
+INS_HNTCH_FREQ,80
+INS_HNTCH_BW,40
+
+# ---- battery: 3S1P 21700 Li-ion, 5000 mAh ------------------------------------------------------
+BATT_MONITOR,4
+BATT_CAPACITY,5000
+BATT_ARM_VOLT,11.4
+BATT_LOW_VOLT,9.9
+BATT_CRT_VOLT,9.3
+# Capacity failsafes keep a landing reserve: hover costs ~91 W, about 2.3x cruise power.
+BATT_LOW_MAH,1250
+BATT_CRT_MAH,750
+# low -> RTL; critical -> QLand (VERIFY action numbers in the parameter description)
+BATT_FS_LOW_ACT,1
+BATT_FS_CRT_ACT,4
+# VTOL current cap (pack is rated 70 A; 40 A still gives ~2.6x thrust/weight)
+Q_M_BAT_CURR_MAX,40
+THR_MAX,85
+
+# ---- airspeed: no sensor fitted (synthetic airspeed) ------------------------------------------
+ARSPD_TYPE,0
+# 16 m/s = 1.25x trimmed stall; 17 m/s is the scouting cruise (~42 W modelled)
+AIRSPEED_MIN,16
+AIRSPEED_CRUISE,17
+# keep 30 m/s (108 km/h) until the 9 g wing load test and a flutter check are done
+AIRSPEED_MAX,30
+SCALING_SPEED,17
+STALL_PREVENTION,1
+ROLL_LIMIT_DEG,45
+
+# ---- return-to-home and loiter ----------------------------------------------------------------
+# meters; 17 m/s at 45 deg bank needs ~30 m radius
+WP_LOITER_RAD,50
+RTL_ALTITUDE,60
+RTL_AUTOLAND,0
+# 1 = after RTL arrives, switch to QRTL and land vertically at home (VERIFY: 3 = fixed-wing approach)
+Q_RTL_MODE,1
+
+# ---- link-loss failsafe (ELRS) ----------------------------------------------------------------
+THR_FAILSAFE,1
+FS_SHORT_ACTN,0
+FS_LONG_ACTN,1
+FS_LONG_TIMEOUT,5
+FS_GCS_ENABL,0
+
+# ---- geofence: stay inside visual line of sight and under 120 m (400 ft) ----------------------
+FENCE_ENABLE,1
+# bitmask: 1 max altitude + 2 circle + 4 polygon
+FENCE_TYPE,7
+FENCE_ACTION,1
+FENCE_ALT_MAX,120
+FENCE_RADIUS,800
+
+# ---- arming ------------------------------------------------------------------------------------
+ARMING_CHECK,1
+# VERIFY bit 18 (only arm in a VTOL mode) in the Q_OPTIONS bitmask before writing this
+Q_OPTIONS,262144

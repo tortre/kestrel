@@ -1,0 +1,34 @@
+{
+  "tag": "stealth_v7_inc",
+  "solver": "SU2 INC_EULER (incompressible 20 m/s, 801109 tets, 0 ill-shaped)",
+  "mesh_tetrahedra": 801109,
+  "points": [
+    {
+      "alpha": 0.0,
+      "CL": -0.1058721009,
+      "CD": 0.009676575254,
+      "CMy": 0.01538808472,
+      "iters": 600,
+      "rms_p": -7.521294311
+    },
+    {
+      "alpha": 4.0,
+      "CL": 0.1998344573,
+      "CD": 0.008546568785,
+      "CMy": 0.003853547083,
+      "iters": 600,
+      "rms_p": -7.648733893
+    },
+    {
+      "alpha": 8.0,
+      "CL": 0.4984741381,
+      "CD": 0.03460280716,
+      "CMy": -0.008286508755,
+      "iters": 600,
+      "rms_p": -7.789456398
+    }
+  ],
+  "cl_per_deg": 0.07554327987500001,
+  "neutral_point_cad_x_mm": -39.17389063953453,
+  "static_margin_at_cg_minus11_3": 0.1114955625581381
+}

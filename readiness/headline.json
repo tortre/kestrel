@@ -1,0 +1,113 @@
+{
+ "build": {
+  "name": "Kestrel-X Stealth v9.2 Under-$300 (hill-climbed parts + airframe, 6S1P, Walksnail HD)",
+  "motor": "Glee Hobby 2810 900KV",
+  "prop": "APC 9x7.5E / 9x7.5EP CW+CCW pair",
+  "battery": "Reliance RS40 6S1P (6x21700, 86Wh, 40A)",
+  "esc": "Readytosky 45A BLHeli_S (2-6S)",
+  "servo": "Emax ES9051 4.3g",
+  "fc": "SpeedyBee F405 Wing Mini",
+  "video": "Camera + video transmitter (Walksnail Ascent Lite+ kit)",
+  "gps": "GPS + compass (Quescan 18 mm M10 + QMC5883L)",
+  "receiver": "Receiver (BetaFPV ELRS Nano 2.4G)",
+  "remote_id": null,
+  "hardware": [
+   "Budget E-glass composite skin (2x49g/m2 +/-45 E-glass + epoxy + laminar finish, RF-transparent)",
+   "Standard 135 GPa T700 pultruded carbon flat spar caps + 0.7mm web + 32x15mm root V-box",
+   "Budget tilt-nacelle kit x2 (2x PTK 7455 MG-D 4.5kgcm + 5mm steel/CF shafts + 685ZZ bearings)",
+   "6S XT60 harness on the FC PDB (16AWG to the pods + 2x 470uF), pin hinges, elevon mass balance, fasteners"
+  ],
+  "material": "LW-PLA (foaming)"
+ },
+ "generated": "2026-11-22 16:32",
+ "mass_g": 1506.595,
+ "cost": 297.71,
+ "wh": 86.4,
+ "usable": 0.85,
+ "rho": 1.225,
+ "hover_w": 269.8465952701225,
+ "hover_pack_a": 12.492897929172338,
+ "pack_v_nominal": 21.6,
+ "cruise": {
+  "14": {
+   "v": 14.0,
+   "kmh": 50.4,
+   "watts": 38.35193966420899,
+   "pack_a": 1.7755527622318976,
+   "endurance_min": 107.85773655641763,
+   "range_km": 90.60049870739081,
+   "mission_min": 77.84291578466973,
+   "mission_km": 65.38804925912257,
+   "above_min_speed": true
+  },
+  "15.5": {
+   "v": 15.5,
+   "kmh": 55.800000000000004,
+   "watts": 44.39401705320387,
+   "pack_a": 2.0552785672779565,
+   "endurance_min": 93.17817308067521,
+   "range_km": 86.65570096502795,
+   "mission_min": 67.24840434876349,
+   "mission_km": 62.54101604435004,
+   "above_min_speed": true
+  }
+ },
+ "reserve_rule": {
+  "usable": 0.85,
+  "hover_s": 120.0,
+  "reserve": 0.2,
+  "note": "energy = Wh x usable x (1 - reserve) - hover W x hover_s"
+ },
+ "closed_form_rule": {
+  "usable": 0.85,
+  "hover_s": 60.0,
+  "note": "energy = Wh x usable - hover W x hover_s"
+ },
+ "static": {
+  "3.6": {
+   "tw": 2.1420503333804386,
+   "thrust_n": 31.658854779009356,
+   "motor_a": 28.13621390770037,
+   "pack_a": 39.99999999982589,
+   "pack_v": 19.76000000000801
+  },
+  "3.3": {
+   "tw": 2.0132821982037687,
+   "thrust_n": 29.755700764281542,
+   "motor_a": 26.4860869699992,
+   "pack_a": 39.999999999984205,
+   "pack_v": 17.960000000000726
+  }
+ },
+ "esc": "Readytosky 45A BLHeli_S (2-6S)",
+ "esc_amps": 45,
+ "i_motor_full_fresh_pack": 31.276114656878406,
+ "v_stall_trimmed_readiness": 10.401050955254588,
+ "cl_max_trimmed_readiness": 0.7290476363135182,
+ "v_stall_trimmed_estimate": 10.401392695652273,
+ "trimmed_clmax_used": 0.729,
+ "v_min_ops": 13.001740869565342,
+ "min_speed_factor": 1.25,
+ "static_margin_3d_pct": [
+  7.828901992801045,
+  17.550570240583244
+ ],
+ "static_margin_1d_pct": [
+  9.314341829752845,
+  19.036010077535046
+ ],
+ "static_margin_as_drawn_pct": {
+  "m3d": 10.321637440950326,
+  "m1d": 11.807077277902128
+ },
+ "best_range": {
+  "v": 13.001740869565342,
+  "km": 92.2657831325474
+ },
+ "loiter": {
+  "v": 13.001740869565342,
+  "min": 118.27362717316883
+ },
+ "vmax": 54.0,
+ "warnings": []
+}

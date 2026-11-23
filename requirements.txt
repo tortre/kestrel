@@ -1,0 +1,18 @@
+# Python 3.12. Versions are the ones the published numbers were made with.
+aerosandbox==4.2.10
+neuralfoil==0.3.3
+numpy==2.5.4
+scipy==1.18.1
+matplotlib==3.11.2
+pillow==13.0.0
+
+# Only for the CFD scripts (sim/cfd_mesh.py, sim/cfd_vis.py). SU2 itself is installed separately.
+gmsh==4.15.2
+meshio==5.3.5
+pyvista==0.49.2
+
+# Only for renders/encode.py
+imageio==2.38.2
+imageio-ffmpeg==0.8.1
+
+# build123d comes with the `cad` command-line tool, which runs the scripts in src/.

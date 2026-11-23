@@ -1,0 +1,161 @@
+# Kestrel-X Stealth v9.2 Under-$300 (hill-climbed parts set and airframe): ArduPlane 4.5+ starting parameters (SpeedyBeeF405WING target, F405 Wing Mini board)
+# Vectored twin-motor tailsitter: two tilt-nacelles (+/-30 deg) do pitch and yaw in hover, differential thrust does roll,
+# two outboard elevons fly it as a plane. Load in Mission Planner: Config > Full Parameter List > Load from file,
+# then Write Params and reboot.
+#
+# THIS IS A STARTING POINT, NOT A TUNE. Props OFF until the motor test and every control-direction check pass.
+# Lines marked VERIFY name parameters whose value or bit depends on the firmware build: read the parameter
+# description in the Full Parameter List before flying.
+#
+# Hardware this file assumes (sim/aircraft.py CURRENT_BUILD, $298 of parts):
+#   2x Glee Hobby 2810 900KV + APC 9x7.5E (right) / 9x7.5EP (left), 2x Readytosky 45 A 2-6S BLHeli_S ESC flashed with
+#   Bluejay, ONE Reliance RS40 6S1P brick (4000 mAh, 40 A continuous, 70 A burst) on the flight controller's own PDB
+#   and 80 A current sensor, 2x Emax ES9051 elevon servos + 2x PTK 7455 MG-D tilt servos, M10 GPS + compass,
+#   ELRS receiver, Walksnail HD camera + VTX kit. No airspeed sensor, no external current sensor.
+#
+# WIRING THAT CAN DESTROY PARTS IF IT IS WRONG (the F405 Wing MINI differs from the full-size Wing):
+#   - Servo BEC jumper: 5 V. The Mini has only 5 V / 6 V, and the ES9051 is rated 4.0-5.5 V.
+#   - VTX supply jumper: 5 V (servo rail). The default is battery voltage; 25 V from a 6S pack is far over the
+#     VTX's input range. The Mini has no 9 V rail.
+#   - Fit a 470 uF 35 V low-ESR capacitor at each ESC (these ESCs ship without one) and 1000 uF on the 5 V servo rail.
+
+# ---- VTOL frame: vectored dual-motor tailsitter ----------------------------------------------------
+Q_ENABLE,1
+Q_TAILSIT_ENABLE,1
+Q_FRAME_CLASS,10
+# 0 = dual-motor tailsitter on ThrottleLeft/ThrottleRight (non-zero is only for copter-motor tailsitters)
+Q_TAILSIT_MOTMX,0
+# 0 = multicopter-style sticks in hover
+Q_TAILSIT_INPUT,0
+# forward transition ends when the nose has pitched 45 deg down from vertical
+Q_TAILSIT_ANGLE,45
+# hover thrust-vectoring gain; 0 in forward flight keeps the nacelles on their over-centre stop
+Q_TAILSIT_VHGAIN,0.85
+Q_TAILSIT_VFGAIN,0.0
+Q_TAILSIT_VHPOW,1.2
+# disk loading = 1.51 kg / (2 x pi x 0.1143^2 m2) = 19 kg/m2 (24 with the second battery brick fitted)
+Q_TAILSIT_DSKLD,19
+# VTOL assist below 12 m/s (trimmed stall is 10.8 m/s). VERIFY: with no airspeed sensor this runs on the
+# estimated airspeed; Q_ASSIST_ANGLE is the backstop that does not need airspeed at all.
+Q_ASSIST_SPEED,12
+Q_ASSIST_ANGLE,35
+Q_M_SPIN_MIN,0.08
+# HARD output ceiling for the VTOL motors. At 100 % a fresh pack with no current limiter would push 53 A through each
+# 45 A ESC (55 A for 10 s) and 106 A through the 70 A-burst pack. At 84 % it cannot exceed either rating, whatever
+# the current limiter below is doing, and thrust/weight is still 1.90 at 3.6 V/cell (sim/hillclimb_v9.py hard_ceiling).
+Q_M_SPIN_MAX,0.84
+Q_M_SPIN_ARM,0.0
+
+# ---- outputs (S1..S6 on the F405 Wing Mini) ----------------------------------------------------------
+# Dual-motor tailsitters drive ThrottleLeft/ThrottleRight (73/74), NOT Motor1/Motor2 (33/34).
+SERVO1_FUNCTION,73
+SERVO2_FUNCTION,74
+# left / right outboard elevon (Emax ES9051)
+SERVO3_FUNCTION,77
+SERVO4_FUNCTION,78
+# left / right tilt-nacelle (PTK 7455 MG-D); set MIN/MAX so the nacelle stops at +/-30 deg, not at the servo's travel
+SERVO5_FUNCTION,75
+SERVO6_FUNCTION,76
+SERVO5_MIN,1000
+SERVO5_TRIM,1500
+SERVO5_MAX,2000
+SERVO6_MIN,1000
+SERVO6_TRIM,1500
+SERVO6_MAX,2000
+
+# ---- DShot + bidirectional RPM telemetry (Bluejay) on the two throttle outputs ------------------------
+# Throttle outputs take DShot through SERVO_BLH_MASK/OTYPE (Q_M_PWM_TYPE only covers copter motors).
+SERVO_BLH_MASK,3
+# 5 = DShot300 (more margin than 600 for bidirectional DShot on an F4)
+SERVO_BLH_OTYPE,5
+# VERIFY: bidirectional DShot needs a bdshot-capable firmware for this board and Bluejay on the ESCs.
+# If no RPM shows in the status tab, set SERVO_BLH_BDMASK,0 and INS_HNTCH_MODE,1 (throttle-based).
+SERVO_BLH_BDMASK,3
+# the 2812 motors are 12N14P
+SERVO_BLH_POLES,14
+
+# ---- gyro harmonic notch (reboot after enabling, then reload this file) ------------------------------
+INS_HNTCH_ENABLE,1
+# 3 = ESC RPM telemetry
+INS_HNTCH_MODE,3
+INS_HNTCH_REF,1
+# hover is about 7,500 rpm = 125 Hz motor rotation; the lower bound sits well under that
+INS_HNTCH_FREQ,80
+INS_HNTCH_BW,40
+
+# ---- battery: ONE 6S1P Reliance RS40 brick, 4000 mAh ----------------------------------------------------
+# With the second brick in parallel (same ESCs): BATT_CAPACITY 8000, BATT_LOW_MAH 2000, BATT_CRT_MAH 1100,
+# Q_M_BAT_CURR_MAX 78, Q_M_SPIN_MAX 0.94, THR_MAX 94, Q_TAILSIT_DSKLD 24, AIRSPEED_MIN 16.
+# 4 = the board's own voltage + current sensor (80 A continuous). Calibrate BATT_AMP_PERVLT against a charger's mAh count.
+BATT_MONITOR,4
+BATT_CAPACITY,4000
+# 3.50 V/cell to arm
+BATT_ARM_VOLT,21.0
+# 3.30 V/cell
+BATT_LOW_VOLT,19.8
+# 3.10 V/cell
+BATT_CRT_VOLT,18.6
+# Capacity failsafes keep a landing reserve: hover costs about 275 W (12.7 A), 7x cruise power.
+# 25 % left -> return home; 14 % left (2.6 min of hover) -> land vertically now
+BATT_LOW_MAH,1000
+BATT_CRT_MAH,550
+# low -> RTL; critical -> QLand (VERIFY action numbers in the parameter description)
+BATT_FS_LOW_ACT,1
+BATT_FS_CRT_ACT,4
+# VTOL current limiter, held just under the cells' 40 A continuous rating. It is slow (seconds), so it is the
+# second line of defence: the hard ceiling is Q_M_SPIN_MAX above. 38 A gives thrust/weight 2.0 at 3.6 V/cell.
+Q_M_BAT_CURR_MAX,38
+Q_M_BAT_CURR_TC,2
+# voltage compensation so hover throttle does not creep up as the pack sags
+Q_M_BAT_VOLT_MAX,25.2
+Q_M_BAT_VOLT_MIN,19.8
+# forward-flight throttle cap: the same 84 % hard ceiling as the VTOL motors
+THR_MAX,84
+
+# ---- airspeed: no sensor fitted (synthetic airspeed) --------------------------------------------------
+# A pitot is the first upgrade to buy (I2C MS4525DO, about $45): ArduPilot recommends one for tailsitters.
+ARSPD_TYPE,0
+ARSPD_USE,0
+# 14 m/s = 1.29x the 10.8 m/s trimmed stall (use 16 with the second brick fitted)
+AIRSPEED_MIN,14
+AIRSPEED_CRUISE,15
+# keep 30 m/s (108 km/h) until the static wing load test and a flutter check are done; the model's limits
+# are 54 m/s level top speed and 68 m/s V_NE
+AIRSPEED_MAX,30
+SCALING_SPEED,15
+STALL_PREVENTION,1
+ROLL_LIMIT_DEG,50
+PTCH_LIM_MAX_DEG,30
+PTCH_LIM_MIN_DEG,-15
+TECS_SPDWEIGHT,1.5
+# yaw damper through differential thrust (flight-tune)
+YAW2SRV_DAMP,0.25
+RUDD_DT_GAIN,25
+
+# ---- return-to-home and loiter --------------------------------------------------------------------------
+# meters; 15 m/s at 45 deg bank needs about 25 m radius
+WP_LOITER_RAD,60
+RTL_ALTITUDE,60
+RTL_AUTOLAND,0
+# 1 = after RTL arrives, switch to QRTL and land vertically at home (VERIFY: 3 = fixed-wing approach)
+Q_RTL_MODE,1
+
+# ---- link-loss failsafe (ELRS) ---------------------------------------------------------------------------
+THR_FAILSAFE,1
+FS_SHORT_ACTN,0
+FS_LONG_ACTN,1
+FS_LONG_TIMEOUT,5
+FS_GCS_ENABL,0
+
+# ---- geofence: stay inside visual line of sight and under 120 m (400 ft) ----------------------------------
+FENCE_ENABLE,1
+# bitmask: 1 max altitude + 2 circle + 4 polygon
+FENCE_TYPE,7
+FENCE_ACTION,1
+FENCE_ALT_MAX,120
+FENCE_RADIUS,800
+
+# ---- arming -----------------------------------------------------------------------------------------------
+ARMING_CHECK,1
+# VERIFY bit 18 (only arm in a VTOL mode) in the Q_OPTIONS bitmask before writing this
+Q_OPTIONS,262144

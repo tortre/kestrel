@@ -1,0 +1,45 @@
+{
+  "build": "Kestrel-X Stealth v9.2 Under-$300 (hill-climbed parts + airframe, 6S1P, Walksnail HD)",
+  "mass_g": 1501.8,
+  "x_cg_mm": 13.0,
+  "v_transition_ms": 14.7,
+  "ixx_kgm2": 0.1169,
+  "iyy_kgm2": 0.0251,
+  "izz_kgm2": 0.1405,
+  "hover": {
+    "ground_tipover_ms": 5.53,
+    "ground_tipover_kmh": 19.9,
+    "tilt_pitch_arm_mm": 123.0,
+    "max_tilt_deg": 30.0,
+    "hover_pitch_max_Nm": 0.906,
+    "hover_pitch_accel_rad_s2": 36.2,
+    "hover_yaw_max_Nm": 1.738,
+    "hover_yaw_accel_rad_s2": 12.4,
+    "hover_roll_max_Nm": 1.912,
+    "gyro_torque_3rads_Nm": 0.408,
+    "hover_wind_hold_ms": 7.4
+  },
+  "outbound": {
+    "min_alt_m": 19.72,
+    "alt_drop_m": 0.28,
+    "max_alt_m": 20.2,
+    "peak_thrust_tw": 1.11,
+    "peak_tilt_deg": 27.3,
+    "peak_elevon_deg": 1.4,
+    "final_speed_ms": 14.73,
+    "final_alt_m": 19.72,
+    "transition_time_s": 4.03
+  },
+  "inbound": {
+    "zoom_climb_m": 29.94,
+    "stopping_distance_m": 43.8,
+    "final_vx_ms": 0.1,
+    "final_vz_ms": 0.0,
+    "final_pitch_deg": 90.2,
+    "peak_tilt_deg": 12.7,
+    "peak_elevon_deg": 1.5,
+    "converged": true,
+    "flare_s": 3.6,
+    "peak_pitch_rate_deg_s": 35.6
+  }
+}

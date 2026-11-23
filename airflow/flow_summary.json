@@ -1,0 +1,34 @@
+{
+ "cruise": {
+  "label": "Cruise, 65 km/h, 1 g",
+  "alpha_deg": 6.590375141473713,
+  "CL": 0.3181345197946918,
+  "lift_N": 5.600072522646096,
+  "peak_loading_pa": 737.7376268023006,
+  "speed_ratio_max": 1.043904240307135
+ },
+ "slow": {
+  "label": "Slow flight just above the stall, 55 km/h",
+  "alpha_deg": 8.665719056490223,
+  "CL": 0.435189658075237,
+  "lift_N": 5.600072522641841,
+  "peak_loading_pa": 749.6884465246424,
+  "speed_ratio_max": 1.0584229869088637
+ },
+ "dive": {
+  "label": "Vertical dive, 196 km/h, no lift",
+  "alpha_deg": 1.0785289971496639,
+  "CL": 1.30112268796541e-17,
+  "lift_N": 2.0929453159543867e-15,
+  "peak_loading_pa": 330.3368091381635,
+  "speed_ratio_max": 1.0035365072889786
+ },
+ "pullout": {
+  "label": "Dive pull-out, 136 km/h, 6 g",
+  "alpha_deg": 8.613575274271058,
+  "CL": 0.43227322928421824,
+  "lift_N": 33.600435135853324,
+  "peak_loading_pa": 4496.71604236775,
+  "speed_ratio_max": 1.057989659697211
+ }
+}

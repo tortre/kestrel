@@ -1,0 +1,170 @@
+{
+ "parts": {
+  "body_nose": {
+   "grams": 13.74,
+   "x": 100.8,
+   "y": 0.0,
+   "z": -0.2
+  },
+  "body_centre": {
+   "grams": 28.45,
+   "x": -4.2,
+   "y": 0.0,
+   "z": -0.4
+  },
+  "body_tail": {
+   "grams": 19.73,
+   "x": -90.3,
+   "y": 0.0,
+   "z": 0.5
+  },
+  "battery_hatch": {
+   "grams": 5.24,
+   "x": 14.3,
+   "y": 0.0,
+   "z": 15.3
+  },
+  "wing_inner_right": {
+   "grams": 12.36,
+   "x": -60.8,
+   "y": 126.6,
+   "z": 1.3
+  },
+  "wing_inner_left": {
+   "grams": 12.36,
+   "x": -60.8,
+   "y": 126.6,
+   "z": 1.3
+  },
+  "wing_outer_right": {
+   "grams": 7.75,
+   "x": -95.2,
+   "y": 227.4,
+   "z": 1.2
+  },
+  "wing_outer_left": {
+   "grams": 7.75,
+   "x": -95.2,
+   "y": 227.4,
+   "z": 1.2
+  },
+  "elevon_right": {
+   "grams": 5.65,
+   "x": -131.4,
+   "y": 174.2,
+   "z": 2.0
+  },
+  "elevon_left": {
+   "grams": 5.65,
+   "x": -131.4,
+   "y": 174.2,
+   "z": 2.0
+  },
+  "tail_fin_right": {
+   "grams": 5.36,
+   "x": -144.0,
+   "y": 77.7,
+   "z": 37.5
+  },
+  "tail_fin_left": {
+   "grams": 5.36,
+   "x": -144.0,
+   "y": 77.7,
+   "z": 37.5
+  },
+  "ventral_fin_right": {
+   "grams": 5.36,
+   "x": -144.0,
+   "y": 85.7,
+   "z": -37.5
+  },
+  "ventral_fin_left": {
+   "grams": 5.36,
+   "x": -144.0,
+   "y": 85.7,
+   "z": -37.5
+  },
+  "motor_pod_right": {
+   "grams": 11.05,
+   "x": -0.4,
+   "y": 160.2,
+   "z": 0.6
+  },
+  "motor_pod_left": {
+   "grams": 10.96,
+   "x": 0.0,
+   "y": 160.2,
+   "z": 0.6
+  }
+ },
+ "geometry": {
+  "battery_x": 12.0,
+  "battery_x_min": -0.75,
+  "battery_x_max": 27.75,
+  "wire_entry_z": -9.0,
+  "wing_shift": 30.0,
+  "washout": 3.8,
+  "camber_k": 0.14,
+  "camber_a": 0.68,
+  "body_reflex": 3.8,
+  "wire_entry_x": -18.0,
+  "nose_frac": 0.2,
+  "spar_y0": 41.5,
+  "carry_x": -52.0,
+  "carry_y": 95.0,
+  "stub_y": [
+   41.5,
+   126.0
+  ],
+  "elevon_y": [
+   95.0,
+   273.0
+  ],
+  "fin_cant": 30.0,
+  "firewall_x": 43.0,
+  "motor_y": 160.0,
+  "motor_x": 53.0,
+  "motor_z": 0.0,
+  "servo_x": -73.6107962529274,
+  "hatch_x": [
+   -39.0,
+   66.0
+  ],
+  "cell_l": 70.2,
+  "pack_dim": [
+   71.5,
+   72.5,
+   25.0
+  ],
+  "half": 280.0,
+  "blend_y": 80.0,
+  "bay_y": 39.5,
+  "d0": [
+   165.0,
+   -175.0,
+   16.2,
+   16.2
+  ],
+  "d36": [
+   118.0,
+   -150.0,
+   15.2,
+   15.2
+  ],
+  "d38": [
+   118.0,
+   -150.0,
+   15.2,
+   15.2
+  ],
+  "root_le": 40.0,
+  "root_chord": 160.0,
+  "tip_le": -79.34426229508196,
+  "tip_chord": 100.0,
+  "thickness": 0.11,
+  "spar_frac": 0.3,
+  "stub_frac": 0.64,
+  "cam_x": 132.0,
+  "fc_x": 94.5
+ }
+}

@@ -1,0 +1,68 @@
+# Kestrel-X Stealth v8 Budget — ArduPlane 4.5+ 6S Dual-Pack Vectored Tilt-Nacelle Parameter File
+# Hardware: SpeedyBee F405 Wing Mini (2-6S, $39.99), 2x T-Motor Cine66 2812 925KV (or Avenger 2812 900KV),
+#           APC 8x8E + 8x8EP CW+CCW, 2x Flycolor Raptor 5 50A BLHeli32 (wired DIRECT to XT60/10AWG bus w/ external
+#           150A Hall sensor — bypasses SpeedyBee 80A PDB!), Molicel P45B 6S2P (9000 mAh) or drop-in 6S3P (13500 mAh),
+#           2x PTK 7308-MG-D (8 mm elevons) + 2x PTK 7455 MG-D (+/-20 deg tilt), Matek ASPD-4525 MS4525DO pitot.
+#
+# 100% WOT-SAFE on fresh 4.2V/cell 6S: max static current <= 49.6 A (<= 50A ESC), max RPM <= 17,389 (<= 18,750 APC limit)!
+
+# ---- QuadPlane Vectored Tailsitter Architecture -------------------------------------------------
+Q_ENABLE,1
+Q_FRAME_CLASS,10                 # Tailsitter
+Q_TAILSIT_ENABLE,2               # Vectored thrust-tilting tailsitter
+Q_TAILSIT_MOTMX,3                # Dual motors (L/R)
+Q_TAILSIT_VHGAIN,0.85            # Hover thrust-vectoring pitch/yaw gain
+Q_TAILSIT_VFGAIN,0.0             # Lock tilt-nacelles at 0 deg over-centre stop in forward flight
+Q_TAILSIT_VHPOW,1.2
+Q_TAILSIT_DSKLD,30.0             # Disk loading = 1.94 kg / (2 * pi * 0.1016^2) = 29.9 kg/m2 (36.7 on 6S3P)
+Q_ASSIST_SPEED,14.5              # Auto VTOL assist below 14.5 m/s
+Q_TRANSITION_MS,2600
+Q_M_BAT_CURR_MAX,80.0            # Leaves >=10 A margin below 90 A 6S2P cell rating (raise to 115 A on 6S3P)
+Q_M_SPIN_MIN,0.08
+Q_M_SPIN_ARM,0.0                 # Configure BLHeli32 Brake-on-Stop in BLHeliSuite32 for dive protection!
+Q_M_PWM_TYPE,6                   # DShot600 on VTOL motors (ArduPlane parameter!)
+SERVO_BLH_OTYPE,6                # DShot600 BLHeli32 protocol on S1/S2
+SERVO_BLH_MASK,3                 # BLHeli32 passthrough & RPM/temp telemetry on SERVO1 + SERVO2
+
+# ---- Servo / Motor Mapping (SpeedyBee F405 Wing Mini: S1..S6, Servo BEC jumper at 7.2V!) --------
+SERVO1_FUNCTION,73               # Left motor (CCW / APC 8x8EP)
+SERVO2_FUNCTION,74               # Right motor (CW / APC 8x8E)
+SERVO3_FUNCTION,77               # Left outboard mass-balanced elevon (PTK 7308-MG-D 8mm)
+SERVO4_FUNCTION,78               # Right outboard mass-balanced elevon (PTK 7308-MG-D 8mm)
+SERVO5_FUNCTION,75               # Left +/-20 deg vectored tilt-nacelle (PTK 7455 MG-D)
+SERVO6_FUNCTION,76               # Right +/-20 deg vectored tilt-nacelle (PTK 7455 MG-D)
+SERVO5_MIN,1000
+SERVO5_TRIM,1500
+SERVO5_MAX,2000
+SERVO6_MIN,1000
+SERVO6_TRIM,1500
+SERVO6_MAX,2000
+
+# ---- Digital Pitot Airspeed Sensor (Matek ASPD-4525 / MS4525DO on I2C1) -------------------------
+ARSPD_TYPE,1                     # MS4525DO I2C differential pressure pitot tube
+ARSPD_USE,1
+ARSPD_AUTOCAL,1
+
+# ---- 6S 21700 Pack (Molicel P45B 6S2P 9000 mAh; change BATT_CAPACITY to 13500/15000 for 6S3P!) --
+BATT_MONITOR,4                   # External 150A Hall sensor on direct XT60/10AWG ESC bus
+BATT_CAPACITY,9000               # mAh (6S2P P45B; set 13500 for P45B 6S3P or 15000 for EVE 50PL 6S3P)
+BATT_LOW_VOLT,19.8               # 3.30 V/cell -> RTL reserve (~20 % SOC remaining)
+BATT_CRT_VOLT,18.6               # 3.10 V/cell -> immediate VTOL QLAND
+BATT_LOW_MAH,1800                # 20 % reserve floor
+BATT_CRT_MAH,900                 # 10 % critical floor
+BATT_ARM_VOLT,21.0               # >= 3.50 V/cell to arm
+BATT_FS_LOW_ACT,1                # RTL
+BATT_FS_CRT_ACT,3                # QLAND
+
+# ---- Fixed-Wing Envelope (ArduPlane 4.5+ parameter names!), V_B & Yaw Damper --------------------
+AIRSPEED_MIN,15.0                # >= 1.25x trimmed stall (41 km/h -> 54 km/h on 6S2P; 16.0 on 6S3P)
+AIRSPEED_MAX,52.0                # 187 km/h auto-throttle cap (FBWA manual throttle requires pilot speed discipline!)
+AIRSPEED_CRUISE,16.0             # 58 km/h best-range stealth cruise
+ROLL_LIMIT_DEG,55
+PTCH_LIM_MAX_DEG,35
+PTCH_LIM_MIN_DEG,-15             # -15 deg dive cap (keeps full-throttle dive <= 237 km/h < provisional V_NE 246 km/h!)
+THR_MAX,75                       # Keep 75-85 until thrust-stand logs confirm < 45 A/motor on fresh pack (<= 90 on 6S3P!)
+YAW2SRV_DAMP,0.25                # Yaw-rate damper gain (flight-tune to achieve closed-loop Dutch roll zeta >= 0.19!)
+RUDD_DT_GAIN,25                  # Differential-thrust yaw authority feeding YAW2SRV_DAMP
+TECS_SPDWEIGHT,1.5
+ESC_TLM_MAV_OFS,0                # Log BLHeli32 RPM, current, and ESC temperature!

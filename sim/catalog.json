@@ -1,0 +1,2365 @@
+{
+ "_about": "Parts catalogue for sim/aircraft.py (the build) and sim/harness.py (the design search). sim/aircraft.py lists the fields each group needs. Prices read from aliexpress.us on 2026-11-12 (USD, US storefront). 'price' is the regular price of the exact variant; 'ship' is the shipping shown on the page. 'welcome' is the one-time new-shopper price, not used in totals. conf: page = variant price read on the item page; listing = lowest price shown in search results, variant not checked; est = my estimate. Electrical specs marked spec_conf est are my estimates from typical data, not from the listing. v9 Under-$300 entries (22 Nov 2026) were read from the shop page named in each 'conf'/'url'; they are item prices, shipping is only counted where 'ship' is set. Batteries: 'imax' is the continuous rating with no temperature cut-off; 'imax_burst' (where given) is the maker's rating with an 80 C cut-off, used only as the ceiling a fresh pack may reach before the firmware current limit acts.",
+ "bay_mm": [
+  228,
+  138,
+  27
+ ],
+ "motors": {
+  "Emax ECO II 2306 1900KV": {
+   "kv": 1900,
+   "r": 0.062,
+   "i0": 0.85,
+   "g": 30.2,
+   "imax": 46,
+   "smax": 6,
+   "shaft": "M5",
+   "price": 15.99,
+   "ship": 0,
+   "url": "https://pyrodrone.com/products/emax-eco-ii-2306-stator-for-5-6-propeller-racing-freestyle-and-cinematic-hd-camera-equipped-crafts-1700kv",
+   "conf": "verified US in-stock (~$11.50 on AliExpress)",
+   "spec_conf": "maker datasheet (62 mOhm, M5 shaft, 16x16 M3)"
+  },
+  "Emax ECO II 2306 1700KV": {
+   "kv": 1700,
+   "r": 0.074,
+   "i0": 0.75,
+   "g": 30.4,
+   "imax": 36,
+   "smax": 6,
+   "shaft": "M5",
+   "price": 15.99,
+   "ship": 0,
+   "url": "https://pyrodrone.com/products/emax-eco-ii-2306-stator-for-5-6-propeller-racing-freestyle-and-cinematic-hd-camera-equipped-crafts-1700kv",
+   "conf": "verified US in-stock (~$11.50 on AliExpress)",
+   "spec_conf": "maker datasheet (74 mOhm, M5 shaft, 16x16 M3)"
+  },
+  "SunnySky X2206 1500KV": {
+   "kv": 1500,
+   "r": 0.147,
+   "i0": 0.3,
+   "g": 25.2,
+   "imax": 13,
+   "smax": 3,
+   "price": 14.58,
+   "ship": 4.62,
+   "item": "3256810368192451",
+   "conf": "page",
+   "spec_conf": "maker table"
+  },
+  "SunnySky X2206 1900KV": {
+   "kv": 1900,
+   "r": 0.112,
+   "i0": 0.6,
+   "g": 25.0,
+   "imax": 13,
+   "smax": 3,
+   "price": 14.58,
+   "ship": 4.62,
+   "item": "3256810368192451",
+   "conf": "page",
+   "spec_conf": "maker table"
+  },
+  "SunnySky X2204 1800KV": {
+   "kv": 1800,
+   "r": 0.156,
+   "i0": 0.2,
+   "g": 19.6,
+   "imax": 12,
+   "smax": 3,
+   "price": 14.26,
+   "ship": 4.62,
+   "item": "3256810368192451",
+   "conf": "page",
+   "spec_conf": "retailer listing"
+  },
+  "SunnySky X2208 1500KV": {
+   "kv": 1500,
+   "r": 0.105,
+   "i0": 0.5,
+   "g": 38.5,
+   "imax": 19,
+   "smax": 3,
+   "price": 18.14,
+   "ship": 4.62,
+   "item": "3256810368192451",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "SunnySky X2208 1260KV": {
+   "kv": 1260,
+   "r": 0.137,
+   "i0": 0.4,
+   "g": 38.5,
+   "imax": 15,
+   "smax": 3,
+   "price": 18.14,
+   "ship": 4.62,
+   "item": "3256810368192451",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "T-Motor AT2306 1500KV": {
+   "kv": 1500,
+   "r": 0.13,
+   "i0": 0.5,
+   "g": 30.0,
+   "imax": 18,
+   "smax": 3,
+   "price": 17.99,
+   "ship": 0,
+   "item": "3256805668441062",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "T-Motor AT2306 1900KV": {
+   "kv": 1900,
+   "r": 0.09,
+   "i0": 0.7,
+   "g": 30.0,
+   "imax": 22,
+   "smax": 3,
+   "price": 17.99,
+   "ship": 0,
+   "item": "3256805668441062",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "T-Motor AT2306 2300KV": {
+   "kv": 2300,
+   "r": 0.065,
+   "i0": 1.0,
+   "g": 30.0,
+   "imax": 28,
+   "smax": 3,
+   "price": 17.99,
+   "ship": 0,
+   "item": "3256805668441062",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "Emax ECO II 2306 2400KV": {
+   "kv": 2400,
+   "r": 0.103,
+   "i0": 0.95,
+   "g": 29.7,
+   "imax": 40,
+   "smax": 6,
+   "shaft": "M5",
+   "note": "Emax sells the ECO II 2306 in 1700/1900/2400KV, so kv is the rated 2400; the MiniQuadTestBench fit behind r and i0 read about 2300 under load (the old entry used 2300)",
+   "price": 20.67,
+   "ship": 0,
+   "item": "3256810113072770",
+   "conf": "listing",
+   "spec_conf": "bench fit (MiniQuadTestBench)"
+  },
+  "Emax ECO II 2207 1700KV": {
+   "kv": 1700,
+   "r": 0.105,
+   "i0": 0.6,
+   "g": 33.8,
+   "imax": 35,
+   "smax": 6,
+   "price": 18.59,
+   "ship": 0,
+   "item": "3256810360643779",
+   "conf": "listing",
+   "spec_conf": "est"
+  },
+  "Generic RS2205 2300KV": {
+   "kv": 2300,
+   "r": 0.11,
+   "i0": 0.9,
+   "g": 30.0,
+   "imax": 27,
+   "smax": 4,
+   "price": 3.33,
+   "ship": 0,
+   "welcome": 1.09,
+   "item": "3256807695439285",
+   "conf": "listing",
+   "spec_conf": "est"
+  },
+  "Generic A2212 1000KV": {
+   "kv": 1000,
+   "r": 0.09,
+   "i0": 0.5,
+   "g": 52.0,
+   "imax": 13,
+   "smax": 3,
+   "price": 5.29,
+   "ship": 0,
+   "welcome": 1.09,
+   "item": "3256806637254874",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "Generic A2212 1400KV": {
+   "kv": 1400,
+   "r": 0.065,
+   "i0": 0.7,
+   "g": 52.0,
+   "imax": 16,
+   "smax": 3,
+   "price": 5.42,
+   "ship": 0,
+   "welcome": 1.09,
+   "item": "3256806637254874",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "T-Motor F90 2806.5 1300KV": {
+   "kv": 1300,
+   "r": 0.076,
+   "i0": 0.95,
+   "g": 46.6,
+   "imax": 45.1,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 33.4,
+   "l_mm": 34.7,
+   "price": 34.99,
+   "ship": 0,
+   "conf": "verified maker datasheet",
+   "spec_conf": "T-Motor official datasheet (12N14P, 5-6S, 1059W)"
+  },
+  "T-Motor F90 2806.5 1500KV": {
+   "kv": 1500,
+   "r": 0.062,
+   "i0": 1.2,
+   "g": 46.7,
+   "imax": 47.4,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 33.4,
+   "l_mm": 34.7,
+   "price": 34.99,
+   "ship": 0,
+   "conf": "verified maker datasheet",
+   "spec_conf": "T-Motor official datasheet (12N14P, 5-6S, 1089W)"
+  },
+  "T-Motor F90 2806.5 1950KV": {
+   "kv": 1950,
+   "r": 0.045,
+   "i0": 1.5,
+   "g": 46.6,
+   "imax": 53.6,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 33.4,
+   "l_mm": 34.7,
+   "price": 34.99,
+   "ship": 0,
+   "conf": "verified maker datasheet",
+   "spec_conf": "T-Motor official datasheet (12N14P, 5-6S, 1302W)"
+  },
+  "Emax ECO II 2807 1300KV": {
+   "kv": 1300,
+   "r": 0.058,
+   "i0": 1.3,
+   "g": 47.6,
+   "imax": 52.0,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 33.9,
+   "l_mm": 34.0,
+   "price": 21.99,
+   "ship": 0,
+   "conf": "verified maker datasheet",
+   "spec_conf": "EMAX official manual (58 mOhm, 1.3A @ 10V, 52A 6S, 1310W)"
+  },
+  "Emax ECO II 2807 1500KV": {
+   "kv": 1500,
+   "r": 0.049,
+   "i0": 1.6,
+   "g": 46.9,
+   "imax": 58.0,
+   "smax": 5,
+   "shaft": "M5",
+   "d_mm": 33.9,
+   "l_mm": 34.0,
+   "price": 21.99,
+   "ship": 0,
+   "conf": "verified maker datasheet",
+   "spec_conf": "EMAX official manual (49 mOhm, 1.6A @ 10V, 58A 5S, 1210W)"
+  },
+  "T-Motor F80 Pro 2408 1900KV": {
+   "kv": 1900,
+   "r": 0.042,
+   "i0": 1.7,
+   "g": 39.7,
+   "imax": 49.2,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 29.0,
+   "l_mm": 33.6,
+   "price": 26.9,
+   "ship": 0,
+   "conf": "verified maker datasheet",
+   "spec_conf": "T-Motor official datasheet (42 mOhm, 1.7A @ 10V, 49.2A 6S, 1122W)"
+  },
+  "T-Motor 2810 900KV": {
+   "kv": 900,
+   "r": 0.0881,
+   "i0": 1.05,
+   "g": 65.0,
+   "imax": 38.4,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 32.9,
+   "l_mm": 36.6,
+   "price": 34.9,
+   "ship": 0,
+   "conf": "verified maker datasheet",
+   "spec_conf": "T-Motor official datasheet (88.1 mOhm, 1.05A @ 10V, 38.4A 6S)"
+  },
+  "T-Motor MN3110 700KV": {
+   "kv": 700,
+   "r": 0.092,
+   "i0": 0.3,
+   "g": 85.0,
+   "imax": 21.0,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 37.7,
+   "l_mm": 28.5,
+   "price": 61.9,
+   "ship": 0,
+   "conf": "verified maker datasheet",
+   "spec_conf": "T-Motor official datasheet (92 mOhm, 0.3A @ 10V, 21A 6S, 80g excl leads + 5g short leads)"
+  },
+  "T-Motor MN3110 780KV": {
+   "kv": 780,
+   "r": 0.071,
+   "i0": 0.4,
+   "g": 85.0,
+   "imax": 26.0,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 37.7,
+   "l_mm": 28.5,
+   "price": 61.9,
+   "ship": 0,
+   "conf": "verified maker datasheet",
+   "spec_conf": "T-Motor official datasheet (71 mOhm, 0.4A @ 10V, 26A 6S, 80g excl leads + 5g short leads)"
+  },
+  "T-Motor AT2312 1150KV": {
+   "kv": 1150,
+   "r": 0.075,
+   "i0": 0.85,
+   "g": 60.0,
+   "imax": 25.0,
+   "smax": 4,
+   "shaft": "M5",
+   "d_mm": 28.4,
+   "l_mm": 31.0,
+   "price": 34.99,
+   "ship": 0,
+   "conf": "verified maker datasheet",
+   "spec_conf": "T-Motor official datasheet (75 mOhm, 0.85A @ 10V, 25A 4S)"
+  },
+  "T-Motor AT2814 1050KV": {
+   "kv": 1050,
+   "r": 0.035,
+   "i0": 1.5,
+   "g": 107.0,
+   "imax": 50.0,
+   "smax": 4,
+   "shaft": "M5",
+   "d_mm": 35.2,
+   "l_mm": 38.0,
+   "price": 49.99,
+   "ship": 0,
+   "conf": "verified maker datasheet",
+   "spec_conf": "T-Motor official datasheet (35 mOhm, 1.5A @ 10V, 50A 4S)"
+  },
+  "T-Motor AT2814 1200KV": {
+   "kv": 1200,
+   "r": 0.026,
+   "i0": 1.8,
+   "g": 108.0,
+   "imax": 55.0,
+   "smax": 4,
+   "shaft": "M5",
+   "d_mm": 35.2,
+   "l_mm": 38.0,
+   "price": 49.99,
+   "ship": 0,
+   "conf": "verified maker datasheet",
+   "spec_conf": "T-Motor official datasheet (26 mOhm, 1.8A @ 10V, 55A 4S)"
+  },
+  "T-Motor F100 2810 1100KV": {
+   "kv": 1100,
+   "r": 0.061,
+   "i0": 0.98,
+   "g": 67.0,
+   "imax": 45.6,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 33.4,
+   "l_mm": 38.05,
+   "price": 35.9,
+   "ship": 0,
+   "conf": "verified maker datasheet",
+   "spec_conf": "T-Motor F100 2810 official datasheet (61 mOhm, 0.98A @ 10V, 45.6A 6S, 1176W)"
+  },
+  "T-Motor F100 2810 1350KV": {
+   "kv": 1350,
+   "r": 0.042,
+   "i0": 1.5,
+   "g": 66.5,
+   "imax": 61.65,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 33.4,
+   "l_mm": 38.05,
+   "price": 35.9,
+   "ship": 0,
+   "conf": "verified maker datasheet",
+   "spec_conf": "T-Motor F100 2810 official datasheet (42 mOhm, 1.50A @ 10V, 61.65A 6S, 1237W)"
+  },
+  "T-Motor Velox V3115 640KV": {
+   "kv": 640,
+   "r": 0.0671,
+   "i0": 1.1,
+   "g": 113.3,
+   "imax": 62.0,
+   "smax": 8,
+   "shaft": "M5",
+   "d_mm": 37.2,
+   "l_mm": 35.0,
+   "price": 49.9,
+   "ship": 0,
+   "conf": "verified T-Motor official datasheet",
+   "spec_conf": "67.13 mOhm, 1.10A @ 10V, 62A 4-8S, 1927W"
+  },
+  "T-Motor Velox V3115 900KV (6-8S)": {
+   "kv": 900,
+   "r": 0.0381,
+   "i0": 1.57,
+   "g": 113.1,
+   "imax": 83.0,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 37.2,
+   "l_mm": 35.0,
+   "price": 49.9,
+   "ship": 0,
+   "conf": "verified T-Motor official datasheet (strictly 4-6S)",
+   "spec_conf": "38.08 mOhm, 1.57A @ 10V, 83A 4-6S, 113.1g"
+  },
+  "T-Motor Cine66 2812 925KV": {
+   "kv": 925,
+   "r": 0.069,
+   "i0": 1.05,
+   "g": 76.4,
+   "imax": 50.5,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 34.4,
+   "l_mm": 39.95,
+   "price": 45.0,
+   "ship": 0,
+   "conf": "verified T-Motor official datasheet",
+   "spec_conf": "69 mOhm, 1.05A @ 10V, 50.5A 5-6S, 1237W"
+  },
+  "BrotherHobby Avenger 2812 V3 900KV": {
+   "kv": 900,
+   "r": 0.087,
+   "i0": 0.95,
+   "g": 76.0,
+   "imax": 45.1,
+   "smax": 8,
+   "shaft": "M5",
+   "d_mm": 33.9,
+   "l_mm": 26.0,
+   "price": 32.99,
+   "ship": 0,
+   "conf": "verified BrotherHobby Avenger 2812 V3 900KV official test report (5-8S)",
+   "spec_conf": "87 mOhm, 0.95A @ 10V, 45.1A, 76.0g"
+  },
+  "BrotherHobby Avenger 2812 V3 1115KV": {
+   "kv": 1115,
+   "r": 0.053,
+   "i0": 1.33,
+   "g": 77.5,
+   "imax": 66.8,
+   "smax": 8,
+   "shaft": "M5",
+   "d_mm": 33.9,
+   "l_mm": 26.0,
+   "price": 32.99,
+   "ship": 0,
+   "conf": "verified BrotherHobby Avenger 2812 V3 1115KV official test report (5-8S, 1656W)",
+   "spec_conf": "53 mOhm, 1.33A @ 10V, 66.8A, 77.5g"
+  },
+  "T-Motor MN3515 400KV": {
+   "kv": 400,
+   "r": 0.116,
+   "i0": 0.3,
+   "g": 160.0,
+   "imax": 30.0,
+   "smax": 8,
+   "shaft": "M5",
+   "d_mm": 42.5,
+   "l_mm": 34.5,
+   "price": 96.9,
+   "ship": 0,
+   "conf": "verified T-Motor official datasheet (153g excl leads + 7g short leads)",
+   "spec_conf": "116 mOhm, 0.30A @ 10V, 30A 4-8S, 900W"
+  },
+  "EMAX ECO II 3115 640KV": {
+   "kv": 640,
+   "r": 0.066,
+   "i0": 1.2,
+   "g": 112.0,
+   "imax": 63.0,
+   "smax": 8,
+   "shaft": "M5",
+   "d_mm": 37.3,
+   "l_mm": 35.0,
+   "price": 26.99,
+   "ship": 0,
+   "conf": "verified EMAX ECO II 3115 640KV official datasheet (6-8S, 2016W)",
+   "spec_conf": "66 mOhm, 1.20A @ 10V, 63A, 106g excl wire + 6g short leads"
+  },
+  "Glee Hobby 2812 900KV": {
+   "kv": 900,
+   "r": 0.068,
+   "i0": 1.0,
+   "g": 78.0,
+   "imax": 40.0,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 33.5,
+   "l_mm": 22.5,
+   "price": 14.49,
+   "ship": 0,
+   "url": "https://gleehobby.com/product/2812-900kv-1100kv-motor/",
+   "conf": "gleehobby.com product page 22 Nov 2026: $14.49 sale (list $18.99), 900KV variant; shipping not checked",
+   "spec_conf": "maker listing only: 12N14P, 0.068 Ohm, 1.0 A @ 10 V, 40 A / 950 W continuous on 6S, 73 g without wires (+5 g leads here); no independent bench data; M5 prop shaft and 19 mm M3 bolt circle assumed (listing states only a 4 mm bearing shaft)"
+  },
+  "Flashhobby Mars M2812 900KV": {
+   "kv": 900,
+   "r": 0.091,
+   "i0": 0.99,
+   "g": 76.8,
+   "imax": 42.9,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 34.3,
+   "l_mm": 27.0,
+   "price": 17.0,
+   "ship": 0,
+   "url": "https://offthegridsun.com/Brushless-Motor/Mars-M2812-2812-900KV-3-6S-High-Speed-Brushless-Motor-Flashhobby",
+   "conf": "offthegridsun.com $17.00 (22 Nov 2026); other shops $19-26",
+   "spec_conf": "maker table: 12N14P, 0.091 Ohm, 1.2 A @ 16 V (= 0.99 A @ 10 V in this model), 42.91 A / 1063 W for 60 s, 275 W rated, 19 mm M3 bolt circle; maker bench: 2492 g at 36.85 A / 25.1 V on an 8040 prop"
+  },
+  "Glee Hobby 2810 900KV": {
+   "kv": 900,
+   "r": 0.07,
+   "i0": 0.8,
+   "g": 69.0,
+   "imax": 43.8,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 33.5,
+   "l_mm": 20.5,
+   "price": 13.99,
+   "ship": 0,
+   "url": "https://gleehobby.com/product/2810-900kv-1100kv-1500kv-motor/",
+   "conf": "gleehobby.com product page 22 Nov 2026: $13.99 sale (list $18.99), 900KV variant; shipping not checked",
+   "spec_conf": "maker listing only (gleehobby.com, 0.07 Ohm, 0.8 A @ 10 V, 43.8 A / 1095 W continuous on 6S, 64 g without wires (+5 g leads here)): 12N14P, no independent bench data; M5 prop shaft and 19 mm M3 bolt circle assumed"
+  },
+  "Glee Hobby 2812 1100KV": {
+   "kv": 1100,
+   "r": 0.078,
+   "i0": 1.2,
+   "g": 78.0,
+   "imax": 60.0,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 33.5,
+   "l_mm": 22.5,
+   "price": 14.49,
+   "ship": 0,
+   "url": "https://gleehobby.com/product/2812-900kv-1100kv-motor/",
+   "conf": "gleehobby.com product page 22 Nov 2026: $14.49 sale, 1100KV variant",
+   "spec_conf": "maker listing only (gleehobby.com, 0.078 Ohm, 1.2 A @ 10 V, 60 A / 1480 W continuous on 6S, 73 g without wires): 12N14P, no independent bench data; M5 prop shaft and 19 mm M3 bolt circle assumed"
+  },
+  "Glee Hobby 2807 1300KV": {
+   "kv": 1300,
+   "r": 0.06,
+   "i0": 1.0,
+   "g": 53.6,
+   "imax": 39.0,
+   "smax": 6,
+   "shaft": "M5",
+   "d_mm": 33.5,
+   "l_mm": 17.5,
+   "price": 12.99,
+   "ship": 0,
+   "url": "https://gleehobby.com/product/2807-1300kv-1500kv-1700kv-motor/",
+   "conf": "gleehobby.com product page 22 Nov 2026: $12.99 sale (list $16.99), 1300KV variant",
+   "spec_conf": "maker listing only (gleehobby.com, 0.06 Ohm, 1.0 A @ 10 V, 39 A / 975 W continuous on 6S, 48.6 g without wires): 12N14P, no independent bench data; M5 prop shaft and 19 mm M3 bolt circle assumed"
+  },
+  "Glee Hobby 2807 1500KV": {
+   "kv": 1500,
+   "r": 0.055,
+   "i0": 1.2,
+   "g": 53.6,
+   "imax": 47.0,
+   "smax": 5,
+   "shaft": "M5",
+   "d_mm": 33.5,
+   "l_mm": 17.5,
+   "price": 12.99,
+   "ship": 0,
+   "url": "https://gleehobby.com/product/2807-1300kv-1500kv-1700kv-motor/",
+   "conf": "gleehobby.com product page 22 Nov 2026: $12.99 sale, 1500KV variant (3-5S)",
+   "spec_conf": "maker listing only (gleehobby.com, 0.055 Ohm, 1.2 A @ 10 V, 47 A, 48.6 g without wires): 12N14P, no independent bench data; M5 prop shaft and 19 mm M3 bolt circle assumed"
+  },
+  "Glee Hobby 2810 1100KV": {
+   "kv": 1100,
+   "r": 0.064,
+   "i0": 1.1,
+   "g": 69.0,
+   "imax": 52.0,
+   "smax": 5,
+   "shaft": "M5",
+   "d_mm": 33.5,
+   "l_mm": 20.5,
+   "price": 13.99,
+   "ship": 0,
+   "url": "https://gleehobby.com/product/2810-900kv-1100kv-1500kv-motor/",
+   "conf": "gleehobby.com product page 22 Nov 2026: $13.99 sale, 1100KV variant (3-5S)",
+   "spec_conf": "maker listing only (gleehobby.com, 0.064 Ohm, 1.1 A @ 10 V, 52 A / 1300 W continuous, 64 g without wires): 12N14P, no independent bench data; M5 prop shaft and 19 mm M3 bolt circle assumed"
+  },
+  "Glee Hobby 2810 1500KV": {
+   "kv": 1500,
+   "r": 0.055,
+   "i0": 1.3,
+   "g": 69.0,
+   "imax": 60.0,
+   "smax": 4,
+   "shaft": "M5",
+   "d_mm": 33.5,
+   "l_mm": 20.5,
+   "price": 13.99,
+   "ship": 0,
+   "url": "https://gleehobby.com/product/2810-900kv-1100kv-1500kv-motor/",
+   "conf": "gleehobby.com product page 22 Nov 2026: $13.99 sale, 1500KV variant (3-4S)",
+   "spec_conf": "maker listing only (gleehobby.com, 0.055 Ohm, 1.3 A @ 10 V, 60 A / 1500 W continuous, 64 g without wires): 12N14P, no independent bench data; M5 prop shaft and 19 mm M3 bolt circle assumed"
+  }
+ },
+ "props": {
+  "_note": "Gemfan glass-nylon APC-style electric props, one CW + CCW pair. Performance taken from the APC file of the same size.",
+  "pair_price_by_inch": {
+   "5": 4.1,
+   "6": 4.12,
+   "7": 4.55,
+   "8": 4.66,
+   "9": 5.8,
+   "10": 6.4,
+   "11": 7.2,
+   "12": 8.2
+  },
+  "item": "3256809786319120",
+  "welcome": 1.09,
+  "conf": "page",
+  "models": {
+   "_about": "Prop models a build can name. 'data' is the key of the performance table in sim/apc_props.json; when it is another maker's prop, the key says so.",
+   "HQProp 7x4.5x2 (APC 7x4.5E data as proxy)": {
+    "data": "7x4.5E",
+    "d_in": 7.0,
+    "pitch_in": 4.5,
+    "blades": 2,
+    "bore_mm": 5,
+    "g": 6.8,
+    "price_pair": 3.99,
+    "url": "https://pyrodrone.com/products/hq-7x4-5x2-durable-bi-blade-7-prop-grey",
+    "conf": "Pyrodrone $3.99 per pack of 2 CW + 2 CCW",
+    "note": "HQProp publishes no thrust/power data for this prop; the APC 7x4.5E table stands in for it. Mass 6.8 g each is an estimate (13.6 g pair in PARTS_LIST.md)"
+   },
+   "APC 8x9 (PER3 official table)": {
+    "data": "8x9",
+    "d_in": 8.0,
+    "pitch_in": 9.0,
+    "blades": 2,
+    "bore_mm": 5,
+    "g": 11.2,
+    "price_pair": 7.5,
+    "conf": "APC official PER3_8x9.dat (10000 rpm block)"
+   },
+   "APC 9x10 Sport/Carbon pair (PER3 9x10 table)": {
+    "data": "9x10",
+    "d_in": 9.0,
+    "pitch_in": 10.0,
+    "blades": 2,
+    "bore_mm": 5,
+    "g": 16.5,
+    "price_pair": 16.0,
+    "rpm_const": 225000.0,
+    "conf": "APC PER3_9x10.dat (10000 rpm block); Rev 5 electric sport/carbon RPM limit 225,000/D"
+   },
+   "APC 8x9 Sport/Carbon pair (PER3 8x9 table)": {
+    "data": "8x9",
+    "d_in": 8.0,
+    "pitch_in": 9.0,
+    "blades": 2,
+    "bore_mm": 5,
+    "g": 13.0,
+    "price_pair": 14.0,
+    "rpm_const": 225000.0,
+    "conf": "APC PER3_8x9.dat (10000 rpm block); Rev 5 electric sport/carbon RPM limit 225,000/D"
+   },
+   "APC 10x10E Thin Electric pair (PER3 10x10E table)": {
+    "data": "10x10E",
+    "d_in": 10.0,
+    "pitch_in": 10.0,
+    "blades": 2,
+    "bore_mm": 5,
+    "g": 20.5,
+    "price_pair": 12.8,
+    "rpm_const": 150000.0,
+    "conf": "APC PER3_10x10E.dat (10000 rpm block); Rev 5 E-prop RPM limit 150,000/D"
+   },
+   "APC 9x9E Thin Electric pair (PER3 9x9E table)": {
+    "data": "9x9E",
+    "d_in": 9.0,
+    "pitch_in": 9.0,
+    "blades": 2,
+    "bore_mm": 5,
+    "g": 16.0,
+    "price_pair": 11.6,
+    "rpm_const": 150000.0,
+    "conf": "APC PER3_9x9E.dat (10000 rpm block); Rev 5 E-prop RPM limit 150,000/D"
+   },
+   "APC 8x8E / 8x8EP CW+CCW pair (LP08080E + LP08080EP)": {
+    "data": "8x8E",
+    "d_in": 8.0,
+    "pitch_in": 8.0,
+    "blades": 2,
+    "bore_mm": 5,
+    "g": 15.0,
+    "price_pair": 8.5,
+    "rpm_const": 150000.0,
+    "conf": "APC official matched CW+CCW pair LP08080E + LP08080EP (0.53 oz = 15.0g, PER3_8x8E.dat, Rev 5 limit 150k/D)"
+   },
+   "APC 9x9E / 9x9EP CW+CCW pair (LP09090E + LP09090EP)": {
+    "data": "9x9E",
+    "d_in": 9.0,
+    "pitch_in": 9.0,
+    "blades": 2,
+    "bore_mm": 5,
+    "g": 17.9,
+    "price_pair": 7.5,
+    "rpm_const": 150000.0,
+    "conf": "APC official matched CW+CCW pair LP09090E + LP09090EP (0.63 oz = 17.9g, PER3_9x9E.dat, Rev 5 limit 150k/D)"
+   },
+   "APC 8x6E / 8x6EP CW+CCW pair (LP08060E + LP08060EP)": {
+    "data": "8x6E",
+    "d_in": 8.0,
+    "pitch_in": 6.0,
+    "blades": 2,
+    "bore_mm": 5,
+    "g": 13.9,
+    "price_pair": 5.84,
+    "rpm_const": 150000.0,
+    "conf": "APC matched CW+CCW pair: LP08060E $2.92 (e-fliterc.com) + LP08060EP $2.92 (readymaderc.com), 22 Nov 2026; 0.49 oz = 13.9 g each; PER3_8x6E.dat; Rev 5 E-prop limit 150,000/D"
+   },
+   "APC 7x5E / 7x5EP CW+CCW pair": {
+    "data": "7x5E",
+    "d_in": 7.0,
+    "pitch_in": 5.0,
+    "blades": 2,
+    "bore_mm": 5,
+    "g": 7.9,
+    "price_pair": 5.5,
+    "rpm_const": 150000.0,
+    "conf": "APC matched CW+CCW thin-electric pair, $2.75 each (pusher listed by aerobertics.be; price est from the 8 in props, 22 Nov 2026); PER3_7x5E.dat; Rev 5 E-prop limit 150,000/D"
+   },
+   "APC 7x6E / 7x6EP CW+CCW pair": {
+    "data": "7x6E",
+    "d_in": 7.0,
+    "pitch_in": 6.0,
+    "blades": 2,
+    "bore_mm": 5,
+    "g": 7.9,
+    "price_pair": 5.5,
+    "rpm_const": 150000.0,
+    "conf": "APC matched CW+CCW thin-electric pair, $2.75 each (LP07060EP listed by radicalrc.com, 0.28 oz; price est from the 8 in props, 22 Nov 2026); PER3_7x6E.dat; Rev 5 E-prop limit 150,000/D"
+   },
+   "APC 9x6E / 9x6EP CW+CCW pair": {
+    "data": "9x6E",
+    "d_in": 9.0,
+    "pitch_in": 6.0,
+    "blades": 2,
+    "bore_mm": 5,
+    "g": 17.0,
+    "price_pair": 6.44,
+    "rpm_const": 150000.0,
+    "conf": "APC matched CW+CCW thin-electric pair, $3.22 each (LP09060EP brodak.com, 22 Nov 2026); PER3_9x6E.dat; Rev 5 E-prop limit 150,000/D"
+   },
+   "APC 9x7.5E / 9x7.5EP CW+CCW pair": {
+    "data": "9x7.5E",
+    "d_in": 9.0,
+    "pitch_in": 7.5,
+    "blades": 2,
+    "bore_mm": 5,
+    "g": 17.9,
+    "price_pair": 6.44,
+    "rpm_const": 150000.0,
+    "conf": "APC matched CW+CCW thin-electric pair, $3.22 each (LP09075EP windcatcherrc.com, 0.63 oz, 22 Nov 2026); PER3_9x7.5E.dat; Rev 5 E-prop limit 150,000/D"
+   },
+   "APC 10x7E / 10x7EP CW+CCW pair": {
+    "data": "10x7E",
+    "d_in": 10.0,
+    "pitch_in": 7.0,
+    "blades": 2,
+    "bore_mm": 5,
+    "g": 20.1,
+    "price_pair": 7.28,
+    "rpm_const": 150000.0,
+    "conf": "APC matched CW+CCW thin-electric pair, $3.64 each (LP10070EP brodak.com, 22 Nov 2026); PER3_10x7E.dat; Rev 5 E-prop limit 150,000/D"
+   },
+   "APC 10x10E / 10x10EP CW+CCW pair": {
+    "data": "10x10E",
+    "d_in": 10.0,
+    "pitch_in": 10.0,
+    "blades": 2,
+    "bore_mm": 5,
+    "g": 20.1,
+    "price_pair": 7.28,
+    "rpm_const": 150000.0,
+    "conf": "APC matched CW+CCW thin-electric pair, $3.64 each (LP10100EP windcatcherrc.com, 0.71 oz, 22 Nov 2026); PER3_10x10E.dat; Rev 5 E-prop limit 150,000/D"
+   }
+  }
+ },
+ "escs": {
+  "LittleBee 20A BLHeli_S": {
+   "amps": 20,
+   "g": 8.0,
+   "price": 3.85,
+   "ship": 0,
+   "item": "3256808715520627",
+   "conf": "page"
+  },
+  "30A BLHeli_S Bluejay / AM32 Mini": {
+   "amps": 30,
+   "g": 6.5,
+   "price": 9.465,
+   "ship": 0,
+   "conf": "Bought as a LittleBee 30A pair, $18.93 shipped (eBay US 187695290555); flash Bluejay. Mass per PARTS_LIST.md"
+  },
+  "LittleBee 30A BLHeli_S": {
+   "amps": 30,
+   "g": 9.0,
+   "price": 5.25,
+   "ship": 0,
+   "item": "3256812292037480",
+   "conf": "AliExpress listing price 12 Nov 2026, variant never re-checked. On 22 Nov 2026 this ESC was sold out at speedyfpv.com ($7.99) and marked discontinued at progressiverc.com, so in_stock is false and sim/hillclimb_v9.py leaves it out unless run with --allow-unverified. FVT LittleBee 30A-S: 2-6S, 30 A continuous / 35 A for 10 s, 9 g with wires, no capacitor fitted",
+   "dims": [
+    35.0,
+    17.0,
+    5.0
+   ],
+   "burst": 35,
+   "in_stock": false
+  },
+  "Flycolor Raptor 5 50A BLHeli32 (2-6S)": {
+   "amps": 50,
+   "g": 8.5,
+   "price": 24.99,
+   "ship": 0,
+   "dims": [
+    32,
+    16,
+    6
+   ],
+   "conf": "verified datasheet"
+  },
+  "Sequre SQESC 2670 70A AM32 (2-6S)": {
+   "amps": 70,
+   "g": 9.0,
+   "price": 36.99,
+   "ship": 0,
+   "dims": [
+    35,
+    18,
+    8
+   ],
+   "conf": "verified Sequre SQESC 2670 AM32 datasheet (70A cont / 110A peak, 9g, 35x18x8 mm)"
+  },
+  "Skystars Jupiter SL80A BLHeli32 (2-8S)": {
+   "amps": 80,
+   "g": 15.0,
+   "price": 45.49,
+   "ship": 0,
+   "dims": [
+    42.6,
+    22.0,
+    8.0
+   ],
+   "conf": "verified Skystars Jupiter SL80A datasheet (80A cont, 2-8S, 15g, 42.6x22mm)"
+  },
+  "Sequre 28120 120A AM32 (2-8S)": {
+   "amps": 120,
+   "g": 24.0,
+   "price": 64.99,
+   "ship": 0,
+   "dims": [
+    46.0,
+    28.0,
+    10.0
+   ],
+   "conf": "verified Sequre 28120 AM32 datasheet (120A cont / 150A burst, 2-8S)"
+  },
+  "Flycolor Raptor 5 50A BLHeli32 (3-6S)": {
+   "amps": 50,
+   "g": 10.2,
+   "price": 25.0,
+   "ship": 0,
+   "dims": [
+    33.0,
+    16.0,
+    6.0
+   ],
+   "conf": "verified fpvstorerc.com / diyfpv.com (5 ea, 50A cont 3-6S, 10.2g, DShot600 + BLHeli32 telemetry + Brake-on-Stop)",
+   "burst": 60
+  },
+  "Readytosky 45A BLHeli_S (2-6S)": {
+   "amps": 45,
+   "burst": 55,
+   "g": 7.0,
+   "price": 9.99,
+   "ship": 0,
+   "dims": [
+    28.5,
+    13.0,
+    5.0
+   ],
+   "url": "https://speedyfpv.com/products/readytosky-45a-blheli_s-2-6s-lipo-esc",
+   "conf": "speedyfpv.com $9.99, in stock 22 Nov 2026 (rotorama.com EUR 11.99); 45 A continuous / 55 A for 10 s, 2-6S, EFM8BB21, DShot600, 7 g, 13 x 28.5 mm, no capacitor fitted; flash Bluejay"
+  }
+ },
+ "batteries": {
+  "Nexus 3S1P Reliance RS50 5000mAh 70A (ready pack)": {
+   "chem": "liion",
+   "ns": 3,
+   "np": 1,
+   "wh": 54.0,
+   "honesty": 1.0,
+   "g": 210,
+   "r": 0.038,
+   "imax": 70,
+   "dims": [
+    71.5,
+    72.5,
+    25
+   ],
+   "price": 63.0,
+   "ship": 7.0,
+   "weld": false,
+   "aliexpress": false,
+   "default": true,
+   "url": "https://nexusbatterysystems.com/products/3s1p-rs50",
+   "conf": "verified Nexus Battery Systems US-assembled ready pack"
+  },
+  "Molicel P50B 3S1P (not on AliExpress)": {
+   "chem": "liion",
+   "ns": 3,
+   "np": 1,
+   "wh": 54.0,
+   "honesty": 1.0,
+   "g": 219,
+   "r": 0.045,
+   "imax": 60,
+   "dims": [
+    73,
+    66,
+    23
+   ],
+   "price": 26.97,
+   "ship": 6.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "verified LiionWholesale $8.99/cell in-stock"
+  },
+  "Molicel M65A 3S1P (not on AliExpress)": {
+   "chem": "liion",
+   "ns": 3,
+   "np": 1,
+   "wh": 70.2,
+   "honesty": 1.0,
+   "g": 235,
+   "r": 0.075,
+   "imax": 26,
+   "dims": [
+    73,
+    66,
+    23
+   ],
+   "price": 35.97,
+   "ship": 6.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "specialist $11.99/cell when stocked"
+  },
+  "Generic 21700 5000mAh 3S1P (4 cells + charger)": {
+   "chem": "liion",
+   "ns": 3,
+   "np": 1,
+   "wh": 55.5,
+   "honesty": 0.85,
+   "g": 222,
+   "r": 0.087,
+   "imax": 20,
+   "dims": [
+    70,
+    63,
+    21
+   ],
+   "price": 25.24,
+   "ship": 0,
+   "weld": true,
+   "aliexpress": true,
+   "item": "3256808840154644",
+   "conf": "page",
+   "spec_conf": "est: unbranded cells, the 40 A claim is not believed"
+  },
+  "EVE-type 21700 5000mAh 15A 3S1P": {
+   "chem": "liion",
+   "ns": 3,
+   "np": 1,
+   "wh": 54.0,
+   "honesty": 0.95,
+   "g": 222,
+   "r": 0.078,
+   "imax": 15,
+   "dims": [
+    70,
+    63,
+    21
+   ],
+   "price": 36.15,
+   "ship": 3.0,
+   "weld": true,
+   "aliexpress": true,
+   "item": "3256811588204842",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "EVE 40PL 21700 4000mAh 3S1P": {
+   "chem": "liion",
+   "ns": 3,
+   "np": 1,
+   "wh": 43.2,
+   "honesty": 0.95,
+   "g": 225,
+   "r": 0.03,
+   "imax": 70,
+   "dims": [
+    70,
+    63,
+    21
+   ],
+   "price": 42.57,
+   "ship": 3.09,
+   "weld": true,
+   "aliexpress": true,
+   "item": "3256811661970653",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "18650 MJ1-type 3500mAh 3S1P ready pack": {
+   "chem": "liion",
+   "ns": 3,
+   "np": 1,
+   "wh": 37.8,
+   "honesty": 0.85,
+   "g": 153,
+   "r": 0.123,
+   "imax": 10,
+   "dims": [
+    67,
+    56,
+    19
+   ],
+   "price": 14.45,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "item": "3256808449216884",
+   "conf": "page",
+   "spec_conf": "est: sold as 'for LG MJ1', cell origin unverified"
+  },
+  "18650 MJ1-type 3500mAh 3S2P ready pack": {
+   "chem": "liion",
+   "ns": 3,
+   "np": 2,
+   "wh": 75.6,
+   "honesty": 0.85,
+   "g": 300,
+   "r": 0.068,
+   "imax": 20,
+   "dims": [
+    67,
+    56,
+    38
+   ],
+   "price": 20.61,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "item": "3256808449216884",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "Generic 21700 5000mAh 3S2P (6 cells + charger)": {
+   "chem": "liion",
+   "ns": 3,
+   "np": 2,
+   "wh": 111.0,
+   "honesty": 0.85,
+   "g": 433,
+   "r": 0.05,
+   "imax": 40,
+   "dims": [
+    70,
+    63,
+    42
+   ],
+   "price": 30.67,
+   "ship": 0,
+   "weld": true,
+   "aliexpress": true,
+   "item": "3256808840154644",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "TERANTY LiPo 3S 1500mAh 45C": {
+   "chem": "lipo",
+   "ns": 3,
+   "np": 1,
+   "wh": 16.65,
+   "honesty": 0.92,
+   "g": 128,
+   "r": 0.064,
+   "imax": 34,
+   "dims": [
+    72,
+    35,
+    25
+   ],
+   "price": 8.65,
+   "ship": 6.35,
+   "weld": false,
+   "aliexpress": true,
+   "item": "3256809019522947",
+   "conf": "page",
+   "spec_conf": "est: mass and size typical for the capacity"
+  },
+  "TERANTY LiPo 3S 2200mAh 45C": {
+   "chem": "lipo",
+   "ns": 3,
+   "np": 1,
+   "wh": 24.42,
+   "honesty": 0.92,
+   "g": 180,
+   "r": 0.047,
+   "imax": 50,
+   "dims": [
+    106,
+    34,
+    24
+   ],
+   "price": 10.75,
+   "ship": 6.35,
+   "weld": false,
+   "aliexpress": true,
+   "item": "3256809019522947",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "TERANTY LiPo 3S 2700mAh 45C": {
+   "chem": "lipo",
+   "ns": 3,
+   "np": 1,
+   "wh": 29.97,
+   "honesty": 0.92,
+   "g": 210,
+   "r": 0.041,
+   "imax": 60,
+   "dims": [
+    107,
+    34,
+    28
+   ],
+   "price": 11.39,
+   "ship": 6.35,
+   "weld": false,
+   "aliexpress": true,
+   "item": "3256809019522947",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "TERANTY LiPo 3S 3300mAh 60C": {
+   "chem": "lipo",
+   "ns": 3,
+   "np": 1,
+   "wh": 36.63,
+   "honesty": 0.92,
+   "g": 270,
+   "r": 0.036,
+   "imax": 80,
+   "dims": [
+    135,
+    43,
+    24
+   ],
+   "price": 14.52,
+   "ship": 6.35,
+   "weld": false,
+   "aliexpress": true,
+   "item": "3256809019522947",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "TERANTY LiPo 3S 4200mAh 60C": {
+   "chem": "lipo",
+   "ns": 3,
+   "np": 1,
+   "wh": 46.62,
+   "honesty": 0.92,
+   "g": 325,
+   "r": 0.031,
+   "imax": 90,
+   "dims": [
+    138,
+    43,
+    29
+   ],
+   "price": 18.15,
+   "ship": 6.35,
+   "weld": false,
+   "aliexpress": true,
+   "item": "3256809019522947",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "TERANTY LiPo 3S 5200mAh 60C": {
+   "chem": "lipo",
+   "ns": 3,
+   "np": 1,
+   "wh": 57.72,
+   "honesty": 0.92,
+   "g": 375,
+   "r": 0.027,
+   "imax": 100,
+   "dims": [
+    138,
+    46,
+    33
+   ],
+   "price": 19.05,
+   "ship": 6.35,
+   "weld": false,
+   "aliexpress": true,
+   "item": "3256809019522947",
+   "conf": "page",
+   "spec_conf": "est"
+  },
+  "Molicel M65A 4S1P (4x21700)": {
+   "chem": "liion",
+   "ns": 4,
+   "np": 1,
+   "wh": 93.6,
+   "honesty": 1.0,
+   "g": 312,
+   "r": 0.1,
+   "imax": 26,
+   "dims": [
+    72,
+    88,
+    23
+   ],
+   "price": 47.96,
+   "ship": 6.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "4x Molicel M65A 21700 (6500 mAh, 72.7 g/cell + 21 g pack hardware)"
+  },
+  "Molicel M65A 4S2P (8x21700)": {
+   "chem": "liion",
+   "ns": 4,
+   "np": 2,
+   "wh": 187.2,
+   "honesty": 1.0,
+   "g": 618,
+   "r": 0.05,
+   "imax": 52,
+   "dims": [
+    144,
+    88,
+    23
+   ],
+   "price": 95.92,
+   "ship": 6.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "8x Molicel M65A 21700 (4S2P flat, 72.7 g/cell + 36 g pack hardware)"
+  },
+  "Molicel M65A 6S1P (6x21700)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 1,
+   "wh": 140.4,
+   "honesty": 1.0,
+   "g": 464,
+   "r": 0.15,
+   "imax": 26,
+   "dims": [
+    144,
+    66,
+    23
+   ],
+   "price": 71.94,
+   "ship": 6.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "6x Molicel M65A 21700 (6S1P flat, 72.7 g/cell + 28 g pack hardware)"
+  },
+  "Molicel M65A 6S2P (12x21700)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 2,
+   "wh": 280.8,
+   "honesty": 1.0,
+   "g": 920,
+   "r": 0.075,
+   "imax": 52,
+   "dims": [
+    144,
+    88,
+    36
+   ],
+   "price": 143.88,
+   "ship": 8.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "12x Molicel M65A 21700 (6S2P brick/staggered, 72.7 g/cell + 48 g nickel/wrap/XT60)"
+  },
+  "Molicel M65A 6S3P (18x21700)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 3,
+   "wh": 421.2,
+   "honesty": 1.0,
+   "g": 1378,
+   "r": 0.05,
+   "imax": 78,
+   "dims": [
+    216,
+    88,
+    36
+   ],
+   "price": 215.82,
+   "ship": 10.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "18x Molicel M65A 21700 (6S3P, 72.7 g/cell + 69 g nickel/wrap/XT60)"
+  },
+  "Reliance RS50 6S2P (12x21700, 140A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 2,
+   "wh": 216.0,
+   "honesty": 1.0,
+   "g": 845,
+   "r": 0.036,
+   "imax": 140,
+   "dims": [
+    144,
+    88,
+    36
+   ],
+   "price": 135.0,
+   "ship": 8.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "12x Reliance RS50 21700 (5000 mAh 70A/cell, 66.5 g/cell + 47 g pack hardware)",
+   "imax_burst": 140
+  },
+  "Molicel P50B 6S2P (12x21700, 120A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 2,
+   "wh": 216.0,
+   "honesty": 1.0,
+   "g": 865,
+   "r": 0.044,
+   "imax": 120,
+   "dims": [
+    144,
+    88,
+    36
+   ],
+   "price": 107.88,
+   "ship": 8.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "12x Molicel P50B 21700 (5000 mAh 60A/cell, 68.0 g/cell + 49 g pack hardware)"
+  },
+  "Molicel P50B 6S1P (6x21700, 60A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 1,
+   "wh": 108.0,
+   "honesty": 1.0,
+   "g": 436,
+   "r": 0.088,
+   "imax": 60,
+   "dims": [
+    144,
+    66,
+    23
+   ],
+   "price": 53.94,
+   "ship": 6.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "6x Molicel P50B 21700 (5000 mAh 60A/cell, 68.0 g/cell + 28 g pack hardware)"
+  },
+  "Reliance RS50 6S3P (18x21700, 210A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 3,
+   "wh": 324.0,
+   "honesty": 1.0,
+   "g": 1265,
+   "r": 0.024,
+   "imax": 210,
+   "dims": [
+    216,
+    134,
+    24
+   ],
+   "price": 202.5,
+   "ship": 10.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "18x Reliance RS50 21700 (5000 mAh 70A/cell, 66.5 g/cell + 68 g nickel/wrap/XT60)",
+   "imax_burst": 210
+  },
+  "EVE 50PL 6S2P (12x21700, 140A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 2,
+   "wh": 216.0,
+   "honesty": 1.0,
+   "g": 864,
+   "r": 0.026,
+   "imax": 140,
+   "dims": [
+    216,
+    90,
+    24
+   ],
+   "price": 96.0,
+   "ship": 8.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "12x EVE 21700 50PL tabless (5000 mAh 70A, <=5mOhm AC / ~8.5mOhm DC, 68g/cell + 48g hw)"
+  },
+  "EVE 50PL 6S3P (18x21700, 210A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 3,
+   "wh": 324.0,
+   "honesty": 1.0,
+   "g": 1292,
+   "r": 0.018,
+   "imax": 210,
+   "dims": [
+    216,
+    134,
+    24
+   ],
+   "price": 144.0,
+   "ship": 10.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "18x EVE 21700 50PL tabless (5000 mAh 70A, 68g/cell + 68g hw)"
+  },
+  "Molicel P60B 6S1P (6x21700, 60A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 1,
+   "wh": 129.6,
+   "honesty": 1.0,
+   "g": 478,
+   "r": 0.077,
+   "imax": 60,
+   "dims": [
+    144,
+    68,
+    24
+   ],
+   "price": 65.94,
+   "ship": 6.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "6x Molicel INR-21700-P60B datasheet (6000mAh/21.6Wh, 75g max, 12.8mOhm DC, 60A cont + 28g hw)"
+  },
+  "Molicel P60B 6S2P (12x21700, 120A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 2,
+   "wh": 259.2,
+   "honesty": 1.0,
+   "g": 948,
+   "r": 0.039,
+   "imax": 120,
+   "dims": [
+    216,
+    90,
+    24
+   ],
+   "price": 131.88,
+   "ship": 8.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "12x Molicel INR-21700-P60B datasheet (6000mAh/21.6Wh, 75g max, 12.8mOhm DC, 60A/cell + 48g hw)"
+  },
+  "Molicel P60B 6S3P (18x21700, 180A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 3,
+   "wh": 388.8,
+   "honesty": 1.0,
+   "g": 1418,
+   "r": 0.026,
+   "imax": 180,
+   "dims": [
+    216,
+    134,
+    24
+   ],
+   "price": 197.82,
+   "ship": 10.0,
+   "weld": true,
+   "aliexpress": false,
+   "conf": "18x Molicel INR-21700-P60B datasheet (6000mAh/21.6Wh, 75g max, 12.8mOhm DC, 60A/cell + 68g hw)",
+   "default": false
+  },
+  "Amprius SiCore SA88 8S2P (16x10.2Ah Si-anode, 204A)": {
+   "chem": "si_liion",
+   "ns": 8,
+   "np": 2,
+   "v_nom_cell": 3.45,
+   "wh": 563.0,
+   "honesty": 0.93,
+   "g": 1682,
+   "r": 0.013,
+   "imax": 204,
+   "dims": [
+    296,
+    126,
+    24
+   ],
+   "price": 480.0,
+   "ship": 20.0,
+   "weld": false,
+   "aliexpress": false,
+   "default": false,
+   "conf": "Amprius Q4 2026 catalog SA88 (10.2Ah, 3.45V, 96.5g, 365Wh/kg, 102A cont, <=2mOhm ACIR -> 3.2mOhm DCIR; +93g tabs/bus + 45g 30PSI CF clamp)"
+  },
+  "Amprius SiCore SA08 8S2P (16x11.05Ah Si-anode, 108A)": {
+   "chem": "si_liion",
+   "ns": 8,
+   "np": 2,
+   "v_nom_cell": 3.4,
+   "wh": 601.1,
+   "honesty": 0.93,
+   "g": 1852,
+   "r": 0.038,
+   "imax": 108,
+   "dims": [
+    296,
+    126,
+    26
+   ],
+   "price": 440.0,
+   "ship": 20.0,
+   "weld": false,
+   "aliexpress": false,
+   "conf": "Amprius Q4 2026 catalog SA08 (11.05Ah, 3.40V, 106.5g, 345Wh/kg, 54A cont, <=6mOhm ACIR -> 9.6mOhm DCIR; +103g bus + 45g CF clamp)"
+  },
+  "Amprius SiCore SA504 8S2P (16x11.05Ah Si-anode, 132A)": {
+   "chem": "si_liion",
+   "ns": 8,
+   "np": 2,
+   "v_nom_cell": 3.4,
+   "wh": 601.1,
+   "honesty": 0.93,
+   "g": 1695,
+   "r": 0.0384,
+   "imax": 132,
+   "dims": [
+    256,
+    132,
+    26
+   ],
+   "price": 520.0,
+   "ship": 20.0,
+   "weld": false,
+   "aliexpress": false,
+   "conf": "Amprius Q4 2026 catalog SA504 (11.05Ah, 3.40V, 97.3g, 386Wh/kg, 66.3A cont, 125.4x42.2x8.3mm; +93g bus + 45g CF clamp)"
+  },
+  "Amprius SiCore SA88 6S2P (12x10.2Ah Si-anode, 204A)": {
+   "chem": "si_liion",
+   "ns": 6,
+   "np": 2,
+   "v_nom_cell": 3.45,
+   "wh": 422.3,
+   "honesty": 0.93,
+   "g": 1272,
+   "r": 0.01,
+   "imax": 204,
+   "dims": [
+    296,
+    126,
+    20
+   ],
+   "price": 360.0,
+   "ship": 15.0,
+   "weld": false,
+   "aliexpress": false,
+   "conf": "12x Amprius SA88 (6S2P, +70g bus + 44g CF clamp)"
+  },
+  "Molicel P45B 6S2P (12x21700, 194Wh, 90A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 2,
+   "wh": 194.4,
+   "honesty": 1.0,
+   "g": 890,
+   "r": 0.03,
+   "imax": 90,
+   "dims": [
+    216,
+    90,
+    24
+   ],
+   "price": 79.88,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": true,
+   "conf": "verified imrbatteries.com .99/cell x12 +  bus/wrap/XT60 (4500mAh, 45A cont/cell -> 90A pack, 10mOhm/cell)",
+   "imax_burst": 90
+  },
+  "Molicel P45B 6S3P (18x21700, 292Wh, 135A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 3,
+   "wh": 291.6,
+   "honesty": 1.0,
+   "g": 1330,
+   "r": 0.02,
+   "imax": 135,
+   "dims": [
+    216,
+    134,
+    24
+   ],
+   "price": 117.82,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "verified imrbatteries.com .99/cell x18 + 0 bus/wrap/XT60 (4500mAh, 45A cont/cell -> 135A pack)",
+   "imax_burst": 135
+  },
+  "EVE 50PL 6S3P (18x21700, 324Wh, 150A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 3,
+   "wh": 324.0,
+   "honesty": 1.0,
+   "g": 1365,
+   "r": 0.015,
+   "imax": 150,
+   "dims": [
+    216,
+    134,
+    24
+   ],
+   "price": 153.82,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "verified imrbatteries.com .99/cell x18 + 0 bus/wrap/XT60 (5000mAh, 50A tabless -> 150A pack)"
+  },
+  "Molicel P45B 6S1P (6x21700, 97Wh, 45A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 1,
+   "wh": 97.2,
+   "honesty": 1.0,
+   "g": 448,
+   "r": 0.06,
+   "imax": 45,
+   "dims": [
+    144,
+    66,
+    24
+   ],
+   "price": 41.94,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": true,
+   "conf": "imrbatteries.com $5.99/cell x6 (22 Nov 2026) + $6 nickel/wrap/XT60/balance lead; 4500 mAh, 45 A/cell, 10 mOhm/cell, 70 g/cell + 28 g hardware; flat 3x2 stick = exactly half of the v8 6S2P pack",
+   "imax_burst": 45
+  },
+  "Molicel P45B 2x 6S1P in parallel (12x21700, 194Wh, 90A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 2,
+   "wh": 194.4,
+   "honesty": 1.0,
+   "g": 896,
+   "r": 0.03,
+   "imax": 90,
+   "dims": [
+    216,
+    90,
+    24
+   ],
+   "price": 83.88,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "two of the 6S1P sticks side by side in the same bay on a parallel XT60 lead: the +$41.94 endurance upgrade of the v9 build",
+   "imax_burst": 90
+  },
+  "Reliance RS40 6S1P (6x21700, 86Wh, 40A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 1,
+   "wh": 86.4,
+   "honesty": 1.0,
+   "g": 430,
+   "r": 0.036,
+   "imax": 40,
+   "dims": [
+    144,
+    66,
+    24
+   ],
+   "price": 35.94,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": true,
+   "conf": "imrbatteries.com $4.99/cell x6 (22 Nov 2026) + $6 hardware; 4000 mAh tabless, >= 40 A continuous without a temperature cut-off (70 A with an 80 C cut-off), about 5 mOhm DC, 67 g/cell + 28 g hardware",
+   "imax_burst": 70
+  },
+  "BAK 45D 6S1P (6x21700, 97Wh, 30A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 1,
+   "wh": 97.2,
+   "honesty": 1.0,
+   "g": 442,
+   "r": 0.048,
+   "imax": 30,
+   "dims": [
+    144,
+    66,
+    24
+   ],
+   "price": 35.94,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "imrbatteries.com $4.99/cell x6 (22 Nov 2026) + $6 nickel/wrap/XT60/balance lead; 4500 mAh, 30 A/cell continuous with no temperature cut-off, about 8 mOhm DC, 69 g/cell + 28 g hardware. Tabless; 60 A only with an 80 C cut-off.",
+   "imax_burst": 60
+  },
+  "Samsung 50S 6S1P (6x21700, 108Wh, 25A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 1,
+   "wh": 108.0,
+   "honesty": 1.0,
+   "g": 442,
+   "r": 0.084,
+   "imax": 25,
+   "dims": [
+    144,
+    66,
+    24
+   ],
+   "price": 35.94,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "imrbatteries.com $4.99/cell x6 (22 Nov 2026) + $6 nickel/wrap/XT60/balance lead; 5000 mAh, 25 A/cell continuous with no temperature cut-off, about 14 mOhm DC, 69 g/cell + 28 g hardware. 45 A only with an 80 C cut-off.",
+   "imax_burst": 45
+  },
+  "Reliance RS50 6S1P (6x21700, 108Wh, 45A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 1,
+   "wh": 108.0,
+   "honesty": 1.0,
+   "g": 442,
+   "r": 0.042,
+   "imax": 45,
+   "dims": [
+    144,
+    66,
+    24
+   ],
+   "price": 59.94,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "imrbatteries.com $8.99/cell x6 (22 Nov 2026) + $6 nickel/wrap/XT60/balance lead; 5000 mAh, 45 A/cell continuous with no temperature cut-off, about 7 mOhm DC, 69 g/cell + 28 g hardware. Tabless; 70 A with an 80 C cut-off.",
+   "imax_burst": 70
+  },
+  "Molicel P45B 4S2P (8x21700, 130Wh, 90A)": {
+   "chem": "liion",
+   "ns": 4,
+   "np": 2,
+   "wh": 129.6,
+   "honesty": 1.0,
+   "g": 596,
+   "r": 0.02,
+   "imax": 90,
+   "dims": [
+    144,
+    88,
+    24
+   ],
+   "price": 54.92,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "imrbatteries.com $5.99/cell x8 (22 Nov 2026) + $7 nickel/wrap/XT60/balance lead; 4500 mAh, 45 A/cell continuous with no temperature cut-off, about 10 mOhm DC, 70 g/cell + 36 g hardware. Flat 2x4 brick.",
+   "imax_burst": 90
+  },
+  "Reliance RS40 4S2P (8x21700, 115Wh, 80A)": {
+   "chem": "liion",
+   "ns": 4,
+   "np": 2,
+   "wh": 115.2,
+   "honesty": 1.0,
+   "g": 572,
+   "r": 0.012,
+   "imax": 80,
+   "dims": [
+    144,
+    88,
+    24
+   ],
+   "price": 46.92,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "imrbatteries.com $4.99/cell x8 (22 Nov 2026) + $7 nickel/wrap/XT60/balance lead; 4000 mAh, 40 A/cell continuous with no temperature cut-off, about 6 mOhm DC, 67 g/cell + 36 g hardware. Flat 2x4 brick.",
+   "imax_burst": 140
+  },
+  "BAK 45D 4S2P (8x21700, 130Wh, 60A)": {
+   "chem": "liion",
+   "ns": 4,
+   "np": 2,
+   "wh": 129.6,
+   "honesty": 1.0,
+   "g": 588,
+   "r": 0.016,
+   "imax": 60,
+   "dims": [
+    144,
+    88,
+    24
+   ],
+   "price": 46.92,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "imrbatteries.com $4.99/cell x8 (22 Nov 2026) + $7 nickel/wrap/XT60/balance lead; 4500 mAh, 30 A/cell continuous with no temperature cut-off, about 8 mOhm DC, 69 g/cell + 36 g hardware. Flat 2x4 brick.",
+   "imax_burst": 120
+  },
+  "Samsung 50S 4S2P (8x21700, 144Wh, 50A)": {
+   "chem": "liion",
+   "ns": 4,
+   "np": 2,
+   "wh": 144.0,
+   "honesty": 1.0,
+   "g": 588,
+   "r": 0.028,
+   "imax": 50,
+   "dims": [
+    144,
+    88,
+    24
+   ],
+   "price": 46.92,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "imrbatteries.com $4.99/cell x8 (22 Nov 2026) + $7 nickel/wrap/XT60/balance lead; 5000 mAh, 25 A/cell continuous with no temperature cut-off, about 14 mOhm DC, 69 g/cell + 36 g hardware. Flat 2x4 brick.",
+   "imax_burst": 90
+  },
+  "Molicel P45B 5S2P (10x21700, 162Wh, 90A)": {
+   "chem": "liion",
+   "ns": 5,
+   "np": 2,
+   "wh": 162.0,
+   "honesty": 1.0,
+   "g": 742,
+   "r": 0.025,
+   "imax": 90,
+   "dims": [
+    144,
+    110,
+    24
+   ],
+   "price": 67.4,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "imrbatteries.com $5.99/cell x10 (22 Nov 2026) + $7.5 nickel/wrap/XT60/balance lead; 4500 mAh, 45 A/cell continuous with no temperature cut-off, about 10 mOhm DC, 70 g/cell + 42 g hardware. Flat 2x5 brick.",
+   "imax_burst": 90
+  },
+  "Reliance RS40 5S2P (10x21700, 144Wh, 80A)": {
+   "chem": "liion",
+   "ns": 5,
+   "np": 2,
+   "wh": 144.0,
+   "honesty": 1.0,
+   "g": 712,
+   "r": 0.015,
+   "imax": 80,
+   "dims": [
+    144,
+    110,
+    24
+   ],
+   "price": 57.4,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "imrbatteries.com $4.99/cell x10 (22 Nov 2026) + $7.5 nickel/wrap/XT60/balance lead; 4000 mAh, 40 A/cell continuous with no temperature cut-off, about 6 mOhm DC, 67 g/cell + 42 g hardware. Flat 2x5 brick.",
+   "imax_burst": 140
+  },
+  "BAK 45D 5S2P (10x21700, 162Wh, 60A)": {
+   "chem": "liion",
+   "ns": 5,
+   "np": 2,
+   "wh": 162.0,
+   "honesty": 1.0,
+   "g": 732,
+   "r": 0.02,
+   "imax": 60,
+   "dims": [
+    144,
+    110,
+    24
+   ],
+   "price": 57.4,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "imrbatteries.com $4.99/cell x10 (22 Nov 2026) + $7.5 nickel/wrap/XT60/balance lead; 4500 mAh, 30 A/cell continuous with no temperature cut-off, about 8 mOhm DC, 69 g/cell + 42 g hardware. Flat 2x5 brick.",
+   "imax_burst": 120
+  },
+  "Samsung 50S 5S2P (10x21700, 180Wh, 50A)": {
+   "chem": "liion",
+   "ns": 5,
+   "np": 2,
+   "wh": 180.0,
+   "honesty": 1.0,
+   "g": 732,
+   "r": 0.035,
+   "imax": 50,
+   "dims": [
+    144,
+    110,
+    24
+   ],
+   "price": 57.4,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "imrbatteries.com $4.99/cell x10 (22 Nov 2026) + $7.5 nickel/wrap/XT60/balance lead; 5000 mAh, 25 A/cell continuous with no temperature cut-off, about 14 mOhm DC, 69 g/cell + 42 g hardware. Flat 2x5 brick.",
+   "imax_burst": 90
+  },
+  "BAK 45D 6S2P (12x21700, 194Wh, 60A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 2,
+   "wh": 194.4,
+   "honesty": 1.0,
+   "g": 876,
+   "r": 0.024,
+   "imax": 60,
+   "dims": [
+    216,
+    90,
+    24
+   ],
+   "price": 67.88,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "imrbatteries.com $4.99/cell x12 (22 Nov 2026) + $8 nickel/wrap/XT60/balance lead; 4500 mAh, 30 A/cell continuous with no temperature cut-off, about 8 mOhm DC, 69 g/cell + 48 g hardware. Flat 3x4 brick.",
+   "imax_burst": 120
+  },
+  "Samsung 50S 6S2P (12x21700, 216Wh, 50A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 2,
+   "wh": 216.0,
+   "honesty": 1.0,
+   "g": 876,
+   "r": 0.042,
+   "imax": 50,
+   "dims": [
+    216,
+    90,
+    24
+   ],
+   "price": 67.88,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "conf": "imrbatteries.com $4.99/cell x12 (22 Nov 2026) + $8 nickel/wrap/XT60/balance lead; 5000 mAh, 25 A/cell continuous with no temperature cut-off, about 14 mOhm DC, 69 g/cell + 48 g hardware. Flat 3x4 brick.",
+   "imax_burst": 90
+  },
+  "Reliance RS40 2x 6S1P in parallel (12x21700, 173Wh, 80A)": {
+   "chem": "liion",
+   "ns": 6,
+   "np": 2,
+   "wh": 172.8,
+   "honesty": 1.0,
+   "g": 860,
+   "r": 0.018,
+   "imax": 80,
+   "dims": [
+    144,
+    134,
+    24
+   ],
+   "price": 71.88,
+   "ship": 0,
+   "weld": false,
+   "aliexpress": true,
+   "default": false,
+   "imax_burst": 140,
+   "conf": "two of the RS40 6S1P bricks side by side in the same bay on a parallel XT60 lead: the +$35.94 endurance upgrade of the v9.1 build"
+  }
+ },
+ "spot_welder": {
+  "price": 10.31,
+  "item": "3256812724242394",
+  "conf": "listing"
+ },
+ "servos": {
+  "Emax ES9051 4.3g": {
+   "g": 4.3,
+   "kgcm": 0.8,
+   "price_pair": 9.98,
+   "item": "2251832246171944",
+   "conf": "EMAX USA $4.99 each, in stock 22 Nov 2026; nylon gears, 0.8 kgcm @ 4.8 V, rated 4.0-5.5 V only (keep the servo rail on 5 V)",
+   "dims": [
+    19.74,
+    8.34,
+    23.25
+   ]
+  },
+  "SG90 9g plastic gear": {
+   "g": 9.0,
+   "kgcm": 1.6,
+   "price_pair": 4.77,
+   "welcome": 1.09,
+   "item": "3256806986899330",
+   "conf": "page",
+   "note": "pack of 3"
+  },
+  "Emax ES08MD II 12g metal gear": {
+   "g": 12.0,
+   "kgcm": 2.0,
+   "price_pair": 13.76,
+   "item": "3256809816157255",
+   "conf": "listing"
+  },
+  "KST X08 Plus V6.0 9g metal gear": {
+   "g": 9.0,
+   "kgcm": 4.7,
+   "price_pair": 79.98,
+   "dims": [
+    23.5,
+    8.0,
+    16.8
+   ],
+   "conf": "verified KST X08 Plus V6.0 datasheet (3.85 kgcm @ 6.0V, 4.84 kgcm @ 7.4V -> 4.70 kgcm on SpeedyBee 7.2V BEC, 9.0g, 8mm thin)"
+  },
+  "PTK 7308-MG-D 8mm 9.2g metal gear": {
+   "g": 9.2,
+   "kgcm": 3.2,
+   "price_pair": 36.0,
+   "dims": [
+    23.5,
+    8.0,
+    21.1
+   ],
+   "conf": "verified hyperflight.co.uk datasheet (8mm thin CNC Al, 3.0kgcm@5V / 3.5kgcm@8.4V -> 3.2kgcm@7.2V, 9.2g, ~8 ea)"
+  },
+  "PTK 7455 MG-D 13g metal gear": {
+   "g": 12.95,
+   "kgcm": 4.5,
+   "price_pair": 13.0,
+   "dims": [
+    23.6,
+    11.7,
+    26.9
+   ],
+   "conf": "verified ptkhobby.com datasheet (4.5kgcm@7.4V, 12.95g, 23.6x11.7x26.9mm, ~.50 ea)"
+  },
+  "Emax ES9052MD 5.5g metal gear": {
+   "g": 5.5,
+   "kgcm": 1.1,
+   "price_pair": 18.38,
+   "dims": [
+    19.9,
+    8.8,
+    23.1
+   ],
+   "conf": "readymaderc.com / EMAX USA $9.19 each (Aloft Hobbies $10.79), 22 Nov 2026; metal gears, coreless, 1.1 kgcm @ 5 V (1.3 @ 6 V), 3.8-6.0 V; 8.8 mm thick: needs the elevon pocket 9.0 mm deep (ELEV_SERVO in src/printable.py)"
+  }
+ },
+ "fcs": {
+  "SpeedyBee F405 Wing Mini": {
+   "g": 19.0,
+   "w": 1.2,
+   "price": 38.39,
+   "ship": 6.07,
+   "esc_included": false,
+   "risky": false,
+   "item": "3256810545908426",
+   "conf": "AliExpress price check 19 Nov 2026 (cheapest F405 Wing Mini listing)",
+   "note": "Mini board (SpeedyBee manual V1.2): servo BEC is 5 V or 6 V at 4 A (there is no 7.2 V setting), the VTX pad carries battery voltage or the 5 V servo rail (there is no 9 V rail), and the current sensor is 80 A continuous / 150 A peak"
+  },
+  "JHEMCU F405 Wing": {
+   "g": 22.0,
+   "w": 1.2,
+   "price": 58.09,
+   "ship": 0,
+   "esc_included": false,
+   "risky": false,
+   "item": "3256810291106519",
+   "conf": "listing"
+  },
+  "DAKEFPV F405 Mini stack (FC + 4-in-1 ESC)": {
+   "g": 22.0,
+   "w": 1.2,
+   "price": 27.29,
+   "ship": 0,
+   "esc_included": true,
+   "esc_amps": 55,
+   "risky": true,
+   "item": "3256812441698591",
+   "conf": "listing",
+   "note": "tailsitter firmware (ArduPilot) support for this board is not verified"
+  },
+  "Matek H743-WING V3 (3-8S)": {
+   "g": 30.0,
+   "w": 1.4,
+   "price": 109.99,
+   "ship": 0,
+   "esc_included": false,
+   "risky": false,
+   "dims": [
+    54.0,
+    36.0,
+    13.0
+   ],
+   "conf": "verified Matek H743-WING V3 datasheet (3-8S, 480MHz H743, dual IMU, 7.2V 8A servo BEC, ArduPilot MATEKH743)"
+  }
+ },
+ "video": {
+  "Camera + video transmitter (Walksnail Ascent Lite+ kit)": {
+   "g": 10.5,
+   "w": 4.5,
+   "price": 39.99,
+   "url": "https://www.caddxfpv.com/products/walksnail-ascent-hd-lite-plus-kit",
+   "conf": "verified CaddxFPV direct ($39.99 in-stock)",
+   "note": "500 mW digital HD kit, 3V-12.6V input, 23.5x23.5x8 mm VTX + 12x14x15.8 mm camera"
+  },
+  "Analog 5.8 GHz VTX + camera (est)": {
+   "g": 8.0,
+   "w": 2.5,
+   "price": 28.0,
+   "conf": "est",
+   "note": "budget analog FPV option from PARTS_LIST.md section 3; mass and power are estimates"
+  }
+ },
+ "gps": {
+  "GPS + compass (Walksnail WS-M181, M10)": {
+   "g": 6.0,
+   "w": 0.3,
+   "price": 13.51,
+   "item": "3256808783946035",
+   "conf": "page"
+  },
+  "GPS + compass (Quescan 18 mm M10 + QMC5883L)": {
+   "g": 6.0,
+   "w": 0.3,
+   "price": 10.25,
+   "item": "3256809818236262",
+   "conf": "PARTS_LIST.md, 17 Nov 2026"
+  }
+ },
+ "receivers": {
+  "Receiver (HappyModel EP1 ELRS 2.4G)": {
+   "g": 1.5,
+   "w": 0.4,
+   "price": 10.65,
+   "item": "3256809057727723",
+   "conf": "page"
+  },
+  "Receiver (BetaFPV ELRS Nano 2.4G)": {
+   "g": 1.5,
+   "w": 0.4,
+   "price": 9.99,
+   "url": "https://betafpv.com/products/elrs-nano-receiver",
+   "conf": "betafpv.com sale price 22 Nov 2026 (regular $16.99), in stock; 0.7 g + T antenna, SX1280, 100 mW telemetry, CRSF"
+  }
+ },
+ "remote_id": {
+  "Remote ID broadcast module (tail shelf, est)": {
+   "g": 8.0,
+   "w": 0.3,
+   "price": 38.0,
+   "conf": "est",
+   "note": "only needed away from a FRIA; 8 g is the CAD allowance (src/printable.py RID_DIM), price from GRANT_APPLICATIONS.md"
+  }
+ },
+ "hardware": {
+  "Carbon tube 6x4x500 mm x2": {
+   "g": 0.0,
+   "price": 10.54,
+   "welcome": 1.09,
+   "item": "3256809965327241",
+   "conf": "page",
+   "note": "mass is counted from the cut lengths in sim/aircraft.py"
+  },
+  "XT60 pigtail, wire, pushrods, screws, strap, glue, tape": {
+   "g": 22.0,
+   "price": 16.0,
+   "conf": "est (PARTS_LIST.md line 12)"
+  },
+  "Carbon spar kit (12x9, 8x6, 6x4 mm telescoping tubes)": {
+   "g": 0.0,
+   "price": 36.0,
+   "conf": "mass counted directly from exact CAD tube lengths in sim/aircraft.py"
+  },
+  "Hover vane servos x2 (Emax ES9051 4.3g) + linkages": {
+   "g": 8.6,
+   "price": 10.91,
+   "conf": "Emax ES9051 pair driving inboard 100% propwash hover vanes"
+  },
+  "6S 12AWG XT60 pigtail, wire, pushrods, screws, strap, glue, tape": {
+   "g": 28.0,
+   "price": 22.0,
+   "conf": "6S heavy-gauge harness + hardware allowance"
+  },
+  "Composite skin (90g/m2 +/-45 CF wing torque box + 2x49g E-glass radome + filler/paint)": {
+   "g": 145.0,
+   "price": 65.0,
+   "conf": "Claude audit verified mass: 170g/m2 laminate + 10% overlaps + 50g/m2 laminar finish"
+  },
+  "Monolithic 2mm carbon V-joiner root box + pultruded spar caps + shear web": {
+   "g": 0.0,
+   "price": 68.0,
+   "conf": "mass computed dynamically from exact spanwise cap dimensions & root box in sim/aircraft.py"
+  },
+  "Tilt-nacelle mechanisms x2 (2x KST X08 Plus + Ti pivot shafts + bearings + over-centre lock)": {
+   "g": 42.0,
+   "price": 104.0,
+   "conf": "2x 9g KST X08 Plus + 24g Ti shafts/bearings/over-centre cruise lock"
+  },
+  "Elevon tungsten/brass LE mass balance + mechanical pin hinges": {
+   "g": 16.0,
+   "price": 14.0,
+   "conf": "mass-balanced elevons eliminating hinge-mode flutter"
+  },
+  "8S 10AWG XT90 direct ESC bus + external 200A Hall current sensor + fasteners": {
+   "g": 45.0,
+   "price": 34.0,
+   "conf": "bypasses FC PDB; rated 120A+ continuous"
+  },
+  "8S 10AWG XT90 direct ESC bus + external 200A Hall sensor + MS4525DO pitot airspeed + fasteners": {
+   "g": 53.0,
+   "price": 62.0,
+   "conf": "45g XT90/10AWG/200A Hall sensor/fasteners + 8g MS4525DO I2C digital pitot airspeed sensor (8)"
+  },
+  "Budget E-glass composite skin (2x49g/m2 +/-45 E-glass + epoxy + laminar finish, RF-transparent)": {
+   "g": 135.0,
+   "price": 18.0,
+   "conf": "225 g/m2 wetted area (2x49g E-glass cloth + laminating epoxy + filler/paint; RF-transparent)"
+  },
+  "Standard 135 GPa T700 pultruded carbon flat spar caps + 0.7mm web + 32x15mm root V-box": {
+   "g": 0.0,
+   "price": 22.0,
+   "conf": "mass computed dynamically from exact CAD box dimensions in sim/aircraft.py"
+  },
+  "Budget tilt-nacelle kit x2 (2x PTK 7455 MG-D 4.5kgcm + 5mm steel/CF shafts + 685ZZ bearings)": {
+   "g": 48.0,
+   "price": 21.0,
+   "conf": "2x 12.95g PTK 7455 MG-D (3/pair) + 22g 5mm pivot shafts/685ZZ bearings/over-centre lock ()"
+  },
+  "6S 10AWG XT60 direct ESC bus + 150A Hall sensor + Matek ASPD-4525 MS4525DO pitot + balance/hinges": {
+   "g": 54.0,
+   "price": 55.4,
+   "conf": "Matek ASPD-4525 pitot (9.40, 8g) + 150A Hall (, 8g) + 10AWG XT60 bus/balance/pin hinges (8, 38g)"
+  },
+  "6S XT60 harness on the FC PDB (16AWG to the pods + 2x 470uF), pin hinges, elevon mass balance, fasteners": {
+   "g": 34.0,
+   "price": 15.0,
+   "conf": "est: XT60 pigtail 1.50 + 16AWG silicone wire 2.50 + two 470 uF 35 V capacitors 1.00 + four servo leads 3.00 + pin hinges, horns and pushrods 3.50 + elevon balance weights 1.50 + screws and heat-shrink 2.00. No external Hall sensor (the FC's own sensor is 80 A continuous and the pack is capped at 45 A) and no pitot"
+  }
+ },
+ "materials": {
+  "LW-PLA (foaming)": {
+   "extra_g": 0.0,
+   "price": 16.7,
+   "item": "3256812858449300",
+   "conf": "listing"
+  },
+  "Ordinary PLA": {
+   "extra_g": 90.0,
+   "price": 9.0,
+   "conf": "est"
+  }
+ }
+}

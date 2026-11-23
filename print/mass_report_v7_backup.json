@@ -1,0 +1,511 @@
+{
+  "total_grams": 526.7,
+  "parts": {
+    "body_nose": {
+      "grams": 45.37,
+      "x": 183.0,
+      "y": -0.0,
+      "z": 0.6,
+      "vol_cm3": 173.14,
+      "area_cm2": 1373.9,
+      "size_mm": [
+        37.6,
+        184.0,
+        216.0
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "body_bay_fwd": {
+      "grams": 42.01,
+      "x": 58.1,
+      "y": -0.0,
+      "z": -0.5,
+      "vol_cm3": 351.03,
+      "area_cm2": 955.4,
+      "size_mm": [
+        37.6,
+        166.0,
+        216.0
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "body_bay_aft": {
+      "grams": 33.8,
+      "x": -90.4,
+      "y": -0.0,
+      "z": -1.4,
+      "vol_cm3": 228.16,
+      "area_cm2": 807.1,
+      "size_mm": [
+        38.5,
+        161.0,
+        207.5
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "body_tail": {
+      "grams": 29.68,
+      "x": -218.0,
+      "y": 0.0,
+      "z": 1.6,
+      "vol_cm3": 60.36,
+      "area_cm2": 819.6,
+      "size_mm": [
+        38.8,
+        159.8,
+        164.0
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "hatch_fwd": {
+      "grams": 12.8,
+      "x": 54.4,
+      "y": 0.0,
+      "z": 17.6,
+      "vol_cm3": 28.79,
+      "area_cm2": 403.8,
+      "size_mm": [
+        2.7,
+        129.4,
+        152.5
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "hatch_aft": {
+      "grams": 12.8,
+      "x": -98.1,
+      "y": -0.0,
+      "z": 17.8,
+      "vol_cm3": 28.6,
+      "area_cm2": 403.6,
+      "size_mm": [
+        3.4,
+        129.4,
+        152.5
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "wing_1_right": {
+      "grams": 27.85,
+      "x": 82.1,
+      "y": 171.7,
+      "z": 6.3,
+      "vol_cm3": 211.14,
+      "area_cm2": 640.8,
+      "size_mm": [
+        24.1,
+        132.0,
+        234.8
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "wing_1_left": {
+      "grams": 27.85,
+      "x": 82.1,
+      "y": -171.7,
+      "z": 6.3,
+      "vol_cm3": 211.14,
+      "area_cm2": 640.8,
+      "size_mm": [
+        24.1,
+        132.0,
+        234.8
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "wing_2_right": {
+      "grams": 25.46,
+      "x": 18.0,
+      "y": 314.1,
+      "z": 14.9,
+      "vol_cm3": 203.57,
+      "area_cm2": 685.7,
+      "size_mm": [
+        24.0,
+        155.0,
+        229.5
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "wing_2_left": {
+      "grams": 25.46,
+      "x": 18.0,
+      "y": -314.1,
+      "z": 14.9,
+      "vol_cm3": 203.57,
+      "area_cm2": 685.7,
+      "size_mm": [
+        24.0,
+        155.0,
+        229.5
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "wing_3_right": {
+      "grams": 23.61,
+      "x": -52.8,
+      "y": 474.1,
+      "z": 24.7,
+      "vol_cm3": 174.64,
+      "area_cm2": 647.3,
+      "size_mm": [
+        22.9,
+        165.0,
+        216.7
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "wing_3_left": {
+      "grams": 23.61,
+      "x": -52.8,
+      "y": -474.1,
+      "z": 24.7,
+      "vol_cm3": 174.64,
+      "area_cm2": 647.3,
+      "size_mm": [
+        22.9,
+        165.0,
+        216.7
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "wing_4_right": {
+      "grams": 17.76,
+      "x": -120.6,
+      "y": 634.9,
+      "z": 34.4,
+      "vol_cm3": 115.29,
+      "area_cm2": 499.9,
+      "size_mm": [
+        21.6,
+        163.7,
+        165.0
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "wing_4_left": {
+      "grams": 17.76,
+      "x": -120.6,
+      "y": -634.9,
+      "z": 34.4,
+      "vol_cm3": 115.29,
+      "area_cm2": 499.9,
+      "size_mm": [
+        21.6,
+        163.7,
+        165.0
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "wing_5_right": {
+      "grams": 14.07,
+      "x": -195.7,
+      "y": 807.6,
+      "z": 44.7,
+      "vol_cm3": 93.8,
+      "area_cm2": 394.0,
+      "size_mm": [
+        20.6,
+        170.0,
+        183.1
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "wing_5_left": {
+      "grams": 14.07,
+      "x": -195.7,
+      "y": -807.6,
+      "z": 44.7,
+      "vol_cm3": 93.8,
+      "area_cm2": 394.0,
+      "size_mm": [
+        20.6,
+        170.0,
+        183.1
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "wing_6_right": {
+      "grams": 15.76,
+      "x": -280.6,
+      "y": 985.1,
+      "z": 58.0,
+      "vol_cm3": 75.99,
+      "area_cm2": 464.5,
+      "size_mm": [
+        68.9,
+        174.3,
+        206.6
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "wing_6_left": {
+      "grams": 15.76,
+      "x": -280.6,
+      "y": -985.1,
+      "z": 58.0,
+      "vol_cm3": 75.99,
+      "area_cm2": 464.5,
+      "size_mm": [
+        68.9,
+        174.3,
+        206.6
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "elevon_right": {
+      "grams": 5.23,
+      "x": -208.9,
+      "y": 727.5,
+      "z": 41.1,
+      "vol_cm3": 19.3,
+      "area_cm2": 158.8,
+      "size_mm": [
+        18.8,
+        118.0,
+        208.4
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "elevon_left": {
+      "grams": 5.23,
+      "x": -208.9,
+      "y": -727.5,
+      "z": 41.1,
+      "vol_cm3": 19.3,
+      "area_cm2": 158.8,
+      "size_mm": [
+        18.8,
+        118.0,
+        208.4
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "tail_fin_right": {
+      "grams": 22.39,
+      "x": -306.8,
+      "y": 90.9,
+      "z": 76.5,
+      "vol_cm3": 62.15,
+      "area_cm2": 357.6,
+      "size_mm": [
+        77.9,
+        180.1,
+        184.2
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "tail_fin_left": {
+      "grams": 22.39,
+      "x": -306.8,
+      "y": -90.9,
+      "z": 76.5,
+      "vol_cm3": 62.15,
+      "area_cm2": 357.6,
+      "size_mm": [
+        77.9,
+        180.1,
+        184.2
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "ventral_fin_right": {
+      "grams": 14.56,
+      "x": -309.7,
+      "y": 88.5,
+      "z": -50.8,
+      "vol_cm3": 39.65,
+      "area_cm2": 233.9,
+      "size_mm": [
+        52.7,
+        117.9,
+        178.8
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "ventral_fin_left": {
+      "grams": 14.56,
+      "x": -309.7,
+      "y": -88.5,
+      "z": -50.8,
+      "vol_cm3": 39.65,
+      "area_cm2": 233.9,
+      "size_mm": [
+        52.7,
+        117.9,
+        178.8
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "motor_pod_right": {
+      "grams": 8.43,
+      "x": 171.9,
+      "y": 245.0,
+      "z": 11.6,
+      "vol_cm3": 6.99,
+      "area_cm2": 106.7,
+      "size_mm": [
+        36.0,
+        36.0,
+        56.6
+      ],
+      "solids": 1,
+      "fits_bed": true
+    },
+    "motor_pod_left": {
+      "grams": 8.43,
+      "x": 171.9,
+      "y": -245.0,
+      "z": 11.6,
+      "vol_cm3": 6.99,
+      "area_cm2": 106.7,
+      "size_mm": [
+        36.0,
+        36.0,
+        56.6
+      ],
+      "solids": 1,
+      "fits_bed": true
+    }
+  },
+  "geometry": {
+    "version": "kestrel_x_stealth_v7",
+    "half": 1060.0,
+    "blend_y": 108.0,
+    "root_le": 190.0,
+    "tip_le": -278.4420742826837,
+    "root_chord": 184.0,
+    "tip_chord": 82.0,
+    "sweep_deg": 26.2,
+    "dihedral_deg": 3.5,
+    "washout": 4.6,
+    "thickness": 0.093,
+    "tip_t_scale": 0.92,
+    "cst_wt": [
+      0.13085031662351138,
+      0.1167523689676592,
+      0.11216133244026333,
+      0.1410834271830178,
+      0.027956839309965592
+    ],
+    "cst_wc": [
+      0.20206186351868127,
+      0.031129848718514347,
+      0.07399839470176278,
+      0.030948892925176247,
+      -0.046925114922772765
+    ],
+    "cst_dz_te": 0.0025,
+    "camber_k": 0.14,
+    "camber_a": 0.68,
+    "d0": [
+      318.0,
+      -342.0,
+      18.8,
+      18.8
+    ],
+    "d_bay": [
+      224.0,
+      -256.0,
+      17.8,
+      17.8
+    ],
+    "d_bay_y": 68.0,
+    "d38": [
+      224.0,
+      -256.0,
+      17.8,
+      17.8
+    ],
+    "nose_frac": 0.19,
+    "flat_end": 0.84,
+    "body_reflex": 5.8,
+    "spar_frac": 0.3,
+    "rweb_frac": 0.7,
+    "spar_y0": 70.0,
+    "carry_x": 148.0,
+    "carry_y": 108.0,
+    "carry_box_w": 34.0,
+    "carry_box_h": 15.0,
+    "spar_h": [
+      11.4,
+      7.9,
+      4.7
+    ],
+    "cap_w": [
+      18.0,
+      16.0,
+      12.0
+    ],
+    "cap_t": [
+      2.25,
+      1.75,
+      1.0
+    ],
+    "wing_splits": [
+      108.0,
+      240.0,
+      395.0,
+      560.0,
+      725.0,
+      895.0,
+      1060.0
+    ],
+    "shark_h": 68.0,
+    "shark_cant": 36.0,
+    "shark_sweep": 38.0,
+    "shark_tip_c": 40.0,
+    "fin_cant": 22.0,
+    "fin_y_up": 60.0,
+    "fin_y_down": 68.0,
+    "fin_up_h": 195.0,
+    "fin_dn_h": 128.0,
+    "fin_x_foot": -402.0,
+    "fin_root_x": [
+      -206.0,
+      -322.0
+    ],
+    "fin_tip_c": 68.0,
+    "motor_y": 245.0,
+    "motor_z": 8.37927896061635,
+    "firewall_x": 200.0,
+    "motor_x": 213.0,
+    "tilt_shaft_x": 158.0,
+    "hinge": 0.7,
+    "elevon_y": [
+      630.0,
+      840.0
+    ],
+    "servo_x": -135.2764532756173,
+    "tilt_servo_x": 69.05968812746103,
+    "cam_x": 264.0,
+    "fc_x": 197.0,
+    "battery_x": -22.0,
+    "battery_x_min": -25.0,
+    "battery_x_max": -19.0
+  }
+}
